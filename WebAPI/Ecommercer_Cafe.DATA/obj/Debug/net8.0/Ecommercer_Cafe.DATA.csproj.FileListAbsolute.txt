@@ -1,0 +1,14 @@
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\bin\Debug\net8.0\Ecommercer_Cafe.DATA.deps.json
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\bin\Debug\net8.0\Ecommercer_Cafe.DATA.runtimeconfig.json
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\bin\Debug\net8.0\Ecommercer_Cafe.DATA.dll
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\bin\Debug\net8.0\Ecommercer_Cafe.DATA.pdb
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.csproj.AssemblyReference.cache
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.AssemblyInfoInputs.cache
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.AssemblyInfo.cs
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.csproj.CoreCompileInputs.cache
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.dll
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\refint\Ecommercer_Cafe.DATA.dll
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.pdb
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\Ecommercer_Cafe.DATA.genruntimeconfig.cache
+C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\Ecommerce_Cafe\Ecommercer_Cafe.DATA\obj\Debug\net8.0\ref\Ecommercer_Cafe.DATA.dll
