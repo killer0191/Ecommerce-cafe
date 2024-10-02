@@ -1,5 +1,6 @@
 import React from "react";
-//import { FaEye, FaEyeSlash } from "react-icons/fa"; // Ejemplo usando react-icons
+import Visibility from '@mui/icons-material/Visibility';  // Importa el icono de "ver"
+import VisibilityOff from '@mui/icons-material/VisibilityOff'; // Importa el icono de "ocultar"
 
 const IconViewP = ({ isPasswordVisible, toggleVisibility }) => (
   <button 
@@ -7,8 +8,7 @@ const IconViewP = ({ isPasswordVisible, toggleVisibility }) => (
     className="button" 
     onClick={toggleVisibility} // Llamamos a la función para alternar la visibilidad
   >
-    {isPasswordVisible ? <a /> : <a />} {/* Cambia el ícono */}
-    {/*isPasswordVisible ? <FaEyeSlash /> : <FaEye />*/} {/* Cambia el ícono */}
+    {isPasswordVisible ? <VisibilityOff /> : <Visibility />} {/* Cambia el ícono */}
   </button>
 );
 
