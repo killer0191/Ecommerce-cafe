@@ -1,5 +1,6 @@
 // src/components/organisms/Login.js
 import LoginForm from '../molecules/LoginForms';
+import '../../styles/login.sass';
 import { useState } from 'react';
 
 const Login = ({ onLogin }) => {

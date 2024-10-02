@@ -1,6 +1,8 @@
 // src/components/molecules/LoginForm.js
 import InputField from '../atoms/InputField';
 import Button from '../atoms/Button';
+import '../../styles/login.sass';
+
 
 const LoginForm = ({ email, password, onEmailChange, onPasswordChange, onSubmit }) => (
   <form onSubmit={onSubmit} className="login-form">

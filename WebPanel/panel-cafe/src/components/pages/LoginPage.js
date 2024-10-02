@@ -1,6 +1,8 @@
 // src/components/pages/LoginPage.js
 import Login from '../organisms/Login';
 import { loginUser } from '../../services/authService';
+import '../../styles/login.sass';
+
 
 const LoginPage = () => {
   const handleLogin = async (credentials) => {
