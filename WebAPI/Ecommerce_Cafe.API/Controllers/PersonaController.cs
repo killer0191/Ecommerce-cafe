@@ -26,9 +26,31 @@ namespace Ecommerce_Cafe.API.Controllers
         [Route("InsertPersona")]
         public async Task<IActionResult> InsertPersona([FromBody] Persona persona)
         {
-            var response = await _personaService.InsertarPersona(persona);
-            Console.WriteLine(response);
-            return Ok(persona);
+            try
+            {
+                var response = await _personaService.InsertarPersona(persona);
+                Console.WriteLine(response);
+                return Ok(persona);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpPost]
+        [Route("AgregarPersona")]
+        public async Task<IActionResult> AddPersona([FromBody] Persona persona)
+        {
+            try
+            {
+                var response = await _personaService.AgregarPersona(persona);
+                Console.WriteLine(response);
+                return Json(persona);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+
         }
 
     }

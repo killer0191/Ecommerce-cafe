@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Ecommerce_Cafe.Entitys/1.0.0": {
+        "runtime": {
+          "Ecommerce_Cafe.Entitys.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ecommerce_Cafe.Entitys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -40,6 +40,11 @@ namespace Ecommerce_Cafe.Business.Services
             var respon = await _personaRepository.Insertar(persona);
             return respon;
         }
+        public async Task<Persona> AgregarPersona(Persona persona)
+        {
+            var respon = await _personaRepository.Add(persona);
+            return respon;
+        }
         public async Task<bool> Actualizar(Persona persona)
         {
             try

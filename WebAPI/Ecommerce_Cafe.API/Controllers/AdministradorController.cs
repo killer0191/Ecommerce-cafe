@@ -13,7 +13,7 @@ namespace Ecommerce_Cafe.API.Controllers
             _administradorService = administradorService;
         }
         [HttpGet]
-        [Route("ObtenerAdministradores")]
+        [Route("api/ObtenerAdministradores")]
         public async Task<IActionResult> lista()
         {
             var result = await _administradorService.ObtenerTodos();
@@ -23,8 +23,14 @@ namespace Ecommerce_Cafe.API.Controllers
         [Route("AgregarAdministrador")]
         public async Task<IActionResult> insertAdmin(Administrador admin)
         {
-            var response = await _administradorService.InsertarAdministrador(admin);
-            return Ok(response);
+            try
+            {
+                var response = await _administradorService.InsertarAdministrador(admin);
+                return Ok(response);
+            }
+            catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]

@@ -15,6 +15,8 @@ public partial class Persona
 
     public string Contraseña { get; set; } = null!;
 
+    //public string? Message { get; set; }
+
     public virtual ICollection<Administrador> Administradors { get; set; } = new List<Administrador>();
 
     public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();

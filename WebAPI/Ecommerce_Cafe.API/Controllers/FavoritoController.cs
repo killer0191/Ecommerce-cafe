@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce_Cafe.API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class FavoritoController : Controller
     {
         private readonly FavoritoService _favoritoService;

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
+      "projectUniqueName": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
       "projectName": "Ecommerce_Cafe.Entitys",
-      "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
+      "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
       "packagesPath": "C:\\Users\\adrym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Entitys\\obj\\",
+      "outputPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adrym\\AppData\\Roaming\\NuGet\\NuGet.Config",

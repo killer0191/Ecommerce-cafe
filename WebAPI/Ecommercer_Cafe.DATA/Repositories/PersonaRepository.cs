@@ -35,6 +35,26 @@ namespace Ecommerce_Cafe.DATA.Repositories
 
         public async Task<Persona> Insertar(Persona entity)
         {
+            try
+            {
+                var passwordHasher = new PasswordHasher<Persona>();
+                entity.Contraseña = passwordHasher.HashPassword(entity, entity.Contraseña);
+
+                var aux = _context.Personas.Add(entity);
+                await _context.SaveChangesAsync();
+
+                return aux.Entity;
+            }
+            catch (Exception ex) { 
+                Persona auxPersona = new Persona();
+                //auxPersona = ex.Message;
+                return auxPersona;
+            }
+        }
+
+        public async Task<Persona> Add(Persona entity)
+        {
+
             var passwordHasher = new PasswordHasher<Persona>();
             entity.Contraseña = passwordHasher.HashPassword(entity, entity.Contraseña);
 

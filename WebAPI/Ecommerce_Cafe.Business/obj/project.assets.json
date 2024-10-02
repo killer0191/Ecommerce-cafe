@@ -3796,11 +3796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
+      "projectUniqueName": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
       "projectName": "Ecommerce_Cafe.Business",
-      "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
+      "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
       "packagesPath": "C:\\Users\\adrym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Business\\obj\\",
+      "outputPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adrym\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3818,11 +3818,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj": {
-              "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj"
+            "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj": {
+              "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj"
             },
-            "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj": {
-              "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj"
+            "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj": {
+              "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj"
             }
           }
         }

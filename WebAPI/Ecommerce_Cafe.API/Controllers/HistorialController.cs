@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce_Cafe.API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class HistorialController : Controller
     {
         private readonly HistorialService _historialService;

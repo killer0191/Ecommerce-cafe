@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gYtgvbMVVnI=",
+  "dgSpecHash": "Y/QiIxD5GT8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\Ecommerce_Cafe\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
+  "projectFilePath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adrym\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\adrym\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
