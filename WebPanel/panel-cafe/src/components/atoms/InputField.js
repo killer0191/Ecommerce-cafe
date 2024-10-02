@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IconViewP from "./IconViewPassword.js"; // Importamos el componente del ícono
 
-const InputField = ({ type = "text", value, onChange, placeholder }) => {
+const InputField = ({ type = "text", value, onChange, placeholder, requerid }) => {
   const [isPasswordVisible, setPasswordVisible] = useState(false); // Estado para controlar visibilidad
 
   // Alterna el tipo de input entre "password" y "text" solo si el input es de tipo password
@@ -25,6 +25,7 @@ const InputField = ({ type = "text", value, onChange, placeholder }) => {
         onChange={onChange}
         placeholder={placeholder}
         className="input-field"
+        required={requerid}
       />
       {/* Solo mostramos el botón de visibilidad si el tipo es password */}
       {type === "password" && (

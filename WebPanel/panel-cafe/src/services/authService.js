@@ -1,8 +1,9 @@
 // src/services/authService.js
+import { API_BASE_URL } from '../config/apiConfig'; // Importa la base URL desde la configuración
 import { UserModel } from '../models/UserModel';
 
 export const loginUser = async ({ email, password }) => {
-  const response = await fetch('https://api.example.com/login', {
+  /*const response = await fetch(`${API_BASE_URL}/login`, { // Usa la base URL
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,6 +15,7 @@ export const loginUser = async ({ email, password }) => {
     throw new Error('Login failed');
   }
 
-  const data = await response.json();
-  return new UserModel(data);  // Retorna una instancia del modelo de usuario
+  const data = await response.json();*/
+  console.log("bien");
+  return false; // Retorna la respuesta o el UserModel, según tu preferencia
 };
