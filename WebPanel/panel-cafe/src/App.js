@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
+import AdminPage from './components/pages/AdminPage';
 import LoginPage from './components/pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute';
 
@@ -16,6 +17,14 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route 
+          path='/admin'
+          element={
+            <PrivateRoute>
+              <AdminPage />
             </PrivateRoute>
           }
         />

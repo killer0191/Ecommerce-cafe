@@ -18,8 +18,12 @@ export const loginUser = async ({ email, password }) => {
     throw new Error('Login failed');
   }
 
-  const data = await response.json();
-  console.log("bien");
-  Cookies.set('auth_token', data.token, { expires: 7 }); 
+  let data = await response.json();
+  if(data.idAdministrador>0){
+    console.log(data);
+    Cookies.set('auth_token', JSON.stringify(data), { expires: 7 });
+  }else{
+    data = null;
+  }
   return data;
 };
