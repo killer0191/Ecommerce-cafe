@@ -1,13 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './components/pages/LoginPage';
 import HomePage from './components/pages/HomePage';
+import LoginPage from './components/pages/LoginPage';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} /> {/* Ruta hacia la HomePage */}
+        {/* Rutas públicas */}
+        <Route path="/login" element={<LoginPage />} />
+
+        {/* Rutas protegidas */}
+        <Route 
+          path="/home" 
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 // src/services/authService.js
 import { API_BASE_URL } from '../config/apiConfig'; // Importa la base URL desde la configuración
-import { UserModel } from '../models/UserModel';
+import Cookies from 'js-cookie';
 
 export const loginUser = async ({ email, password }) => {
   let correo = email;
@@ -20,5 +20,6 @@ export const loginUser = async ({ email, password }) => {
 
   const data = await response.json();
   console.log("bien");
-  return data; // Retorna la respuesta o el UserModel, según tu preferencia
+  Cookies.set('auth_token', data.token, { expires: 7 }); 
+  return data;
 };
