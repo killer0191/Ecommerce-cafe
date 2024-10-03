@@ -1,8 +1,15 @@
 import React from "react";
+import AdminTemplate from '../templates/AdminTemplate';
+import AdminPanel from '../templates/AdminPanel';
 
 const AdminPage = () => {
     return (
-        <h1>Administrador</h1>
+        <AdminTemplate>
+            <div>
+                {/* Contenido de la página Administrador */}
+                <AdminPanel/>
+            </div>
+        </AdminTemplate>
     );
 };
 

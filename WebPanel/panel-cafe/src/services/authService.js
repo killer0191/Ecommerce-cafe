@@ -1,6 +1,8 @@
 // src/services/authService.js
 import { API_BASE_URL } from '../config/apiConfig'; // Importa la base URL desde la configuración
 import Cookies from 'js-cookie';
+import getDataCookie from './cookieService';
+import { useNavigate } from 'react-router-dom';
 
 export const loginUser = async ({ email, password }) => {
   let correo = email;
@@ -26,4 +28,25 @@ export const loginUser = async ({ email, password }) => {
     data = null;
   }
   return data;
+};
+
+export const logoutUser = async () => {
+  //const navigate = useNavigate(); // Hook para navegar
+  let data = getDataCookie();
+  let response = true;
+  
+  /*const response = await fetch(`${API_BASE_URL}/Administrador/Logout/${data.idAdministrador}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });*/
+
+  if (response === true) {
+    Cookies.remove('auth_token'); // Borra la cookie
+
+    // Redirige al usuario a la página de login
+    //navigate('/login');
+  }
+  return response;
 };

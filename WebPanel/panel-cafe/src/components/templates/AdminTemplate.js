@@ -15,7 +15,7 @@ const AdminTemplate = ({ children }) => {
 
       <Box sx={{ flexGrow: 1 }}>
         {/* Header en la parte superior */}
-        <Header src="url_de_la_imagen.jpg" adminName={name} />
+        <Header src="url_de_la_imagen.jpg" adminName={name} userData={json}/>
 
         {/* Contenido dinámico de cada página */}
         <Box sx={{ padding: '16px' }}>
