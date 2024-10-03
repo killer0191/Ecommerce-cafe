@@ -19,3 +19,19 @@ public partial class Usuario
 
     public virtual Persona IdPersonaNavigation { get; set; } = null!;
 }
+
+public class UsuarioLogin
+{
+    public int IdUsuario { get; set; }
+
+    public string Numero { get; set; } = null!;
+
+    public int IdPersona { get; set; }
+    public string Nombre { get; set; } = null!;
+
+    public string Apellido { get; set; } = null!;
+
+    public string Correo { get; set; } = null!;
+
+    public string Contraseña { get; set; } = null!;
+}

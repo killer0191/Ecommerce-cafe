@@ -116,8 +116,9 @@ namespace Ecommerce_Cafe.Business.Services
             var res = response.FirstOrDefault(a => a.IdPersona == id);
             return res;
         }
-        public async Task<bool> Login(Login log)
+        public async Task<AdministradorLogin> Login(Login log)
     {
+            AdministradorLogin auxAdmin = new AdministradorLogin();
         try
         {
             var personas = await _personaService.ObtenerPersonas();
@@ -125,24 +126,36 @@ namespace Ecommerce_Cafe.Business.Services
 
             if (persona == null)
             {
-                return false;
+                return auxAdmin;
             }
             var passwordHasher = new PasswordHasher<Persona>();
 
             var passwordVerificationResult = passwordHasher.VerifyHashedPassword(persona, persona.Contraseña, log.password);
 
             if (passwordVerificationResult == PasswordVerificationResult.Success)
-            {
+            {              
                 var admin = await ObtenerAdminByIdPersona(persona.IdPersona);
-                return true;
+
+                admin.Sesion = true;
+                var resp = await _adminRepository.Actualizar(admin);
+
+                auxAdmin.IdAdministrador = admin.IdAdministrador;
+                auxAdmin.Sesion = true;
+                auxAdmin.IdPersona = persona.IdPersona;
+                auxAdmin.Nombre = persona.Nombre;
+                auxAdmin.Apellido = persona.Apellido;
+                auxAdmin.Correo = persona.Correo;
+                auxAdmin.Contraseña = persona.Contraseña;
+
+                return auxAdmin;
             }
 
-            return false; // Si la contraseña no coincide
+            return auxAdmin; // Si la contraseña no coincide
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.ToString());
-            return false;
+            return auxAdmin;
         }
     }
 

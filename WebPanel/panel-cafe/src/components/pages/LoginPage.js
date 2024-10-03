@@ -17,8 +17,9 @@ const LoginPage = () => {
 
     try {
       const user = await loginUser(credentials);
-      if (user === true) {
+      if (user != null) {
         console.log("bandera 1");
+        console.log(user);
         setLoading(false); // Ocultar la alerta de carga
         setShowAlertOK(true); // Mostrar la alerta de éxito si el login es correcto
 

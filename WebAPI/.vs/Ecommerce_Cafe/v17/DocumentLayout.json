@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.business\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.entitys\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|solutionrelative:ecommerce_cafe.entitys\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.business\\services\\administradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\administradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.api\\controllers\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommercer_cafe.data\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|solutionrelative:ecommercer_cafe.data\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.business\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.api\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 494,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,39 +118,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PersonaController.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\PersonaController.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\PersonaController.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\PersonaController.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\PersonaController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwC4AAAAqAAAA",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAqwG8AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T01:34:20.758Z",
+              "WhenOpened": "2024-10-03T02:37:24.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PersonaService.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\PersonaService.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\PersonaService.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\PersonaService.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\PersonaService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwCwAAAA1AAAA",
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAAwI4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T01:43:20.523Z",
+              "WhenOpened": "2024-10-03T02:33:32.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Usuario.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Entitys\\Usuario.cs",
+              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Usuario.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Entitys\\Usuario.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA1wCMAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T02:32:58.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdministradorController.cs",
+              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
+              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAmwGQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T02:21:32.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdministradorService.cs",
+              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
+              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAAwI4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T02:20:29.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PersonaRepository.cs",
               "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
               "RelativeDocumentMoniker": "Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
               "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
               "RelativeToolTip": "Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowCMAAAAIAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAA5wCMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T01:43:35.596Z",
               "EditorCaption": ""

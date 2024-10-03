@@ -97,8 +97,8 @@ namespace Ecommerce_Cafe.API.Controllers
         {
             var response = await _administradorService.Login(log);
             
-            if (!response) { return Json("Usuario no encontrado"); }
-            return Ok(response);
+            if (response.IdAdministrador <= 0) { return Json("Usuario no encontrado"); }
+            return Json(response);
         }
     }
 }

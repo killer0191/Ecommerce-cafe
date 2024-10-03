@@ -71,6 +71,17 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -83,7 +94,7 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
 }
-
+app.UseCors("AllowAll");
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
