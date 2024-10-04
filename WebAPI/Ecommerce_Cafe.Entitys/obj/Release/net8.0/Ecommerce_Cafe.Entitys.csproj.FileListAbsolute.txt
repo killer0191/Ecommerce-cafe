@@ -10,3 +10,15 @@ C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\WebAPI\Ecommerce_Cafe.Entitys\
 C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\refint\Ecommerce_Cafe.Entitys.dll
 C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.pdb
 C:\Users\adrym\OneDrive\Documents\Jhessy\Proyecto\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\ref\Ecommerce_Cafe.Entitys.dll
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\bin\Release\net8.0\Ecommerce_Cafe.Entitys.deps.json
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\bin\Release\net8.0\Ecommerce_Cafe.Entitys.dll
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\bin\Release\net8.0\Ecommerce_Cafe.Entitys.pdb
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.AssemblyInfoInputs.cache
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.AssemblyInfo.cs
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.csproj.CoreCompileInputs.cache
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.sourcelink.json
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.dll
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\refint\Ecommerce_Cafe.Entitys.dll
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\Ecommerce_Cafe.Entitys.pdb
+C:\Users\auxdesarrollo3\Documents\Proyectos\Cafeteria\Ecommerce-cafe\WebAPI\Ecommerce_Cafe.Entitys\obj\Release\net8.0\ref\Ecommerce_Cafe.Entitys.dll

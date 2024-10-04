@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommerce_cafe.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.business\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommercer_cafe.data\\repositories\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|solutionrelative:ecommercer_cafe.data\\repositories\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.entitys\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|solutionrelative:ecommerce_cafe.entitys\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommerce_cafe.entitys\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|solutionrelative:ecommerce_cafe.entitys\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.business\\services\\administradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\administradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommerce_cafe.entitys\\tipoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6987CE5-186B-4622-B003-9AFBC78F0202}|Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj|solutionrelative:ecommerce_cafe.entitys\\tipoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommerce_cafe.api\\controllers\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommerce_cafe.api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A22E4A-71DA-4EA8-8D01-66CD1DB523D2}|Ecommerce_Cafe.API\\Ecommerce_Cafe.API.csproj|solutionrelative:ecommerce_cafe.api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|c:\\users\\adrym\\onedrive\\documents\\jhessy\\proyecto\\webapi\\ecommercer_cafe.data\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92002D9-58DA-43DE-8D89-3E92A760A21E}|Ecommercer_Cafe.DATA\\Ecommerce_Cafe.DATA.csproj|solutionrelative:ecommercer_cafe.data\\repositories\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|c:\\users\\auxdesarrollo3\\documents\\proyectos\\cafeteria\\ecommerce-cafe\\webapi\\ecommerce_cafe.business\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45B2B746-15C1-4DF9-A55C-227E54B697A7}|Ecommerce_Cafe.Business\\Ecommerce_Cafe.Business.csproj|solutionrelative:ecommerce_cafe.business\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +34,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 494,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:13:27.197Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Business\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Business\\Services\\ProductoService.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\ProductoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:13:34.34Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\ProductoRepository.cs",
+              "RelativeDocumentMoniker": "Ecommercer_Cafe.DATA\\Repositories\\ProductoRepository.cs",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\ProductoRepository.cs",
+              "RelativeToolTip": "Ecommercer_Cafe.DATA\\Repositories\\ProductoRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA/wDkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:13:41.416Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\Producto.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Entitys\\Producto.cs",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\Producto.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Entitys\\Producto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:13:48.504Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.API\\appsettings.json",
+              "RelativeToolTip": "Ecommerce_Cafe.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-04T21:20:49.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TipoProducto.cs",
+              "DocumentMoniker": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\TipoProducto.cs",
+              "RelativeDocumentMoniker": "Ecommerce_Cafe.Entitys\\TipoProducto.cs",
+              "ToolTip": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\TipoProducto.cs",
+              "RelativeToolTip": "Ecommerce_Cafe.Entitys\\TipoProducto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:18:57.655Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -115,84 +197,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 204,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAqwG8AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:37:24.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\UsuarioService.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAAwI4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:33:32.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Usuario.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.Entitys\\Usuario.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Usuario.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.Entitys\\Usuario.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAA1wCMAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:32:58.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdministradorController.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.API\\Controllers\\AdministradorController.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAmwGQAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:21:32.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdministradorService.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
-              "RelativeDocumentMoniker": "Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
-              "RelativeToolTip": "Ecommerce_Cafe.Business\\Services\\AdministradorService.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAAwI4AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:20:29.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PersonaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
-              "RelativeDocumentMoniker": "Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
-              "ToolTip": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
-              "RelativeToolTip": "Ecommercer_Cafe.DATA\\Repositories\\PersonaRepository.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAA5wCMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T01:43:35.596Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

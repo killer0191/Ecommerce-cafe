@@ -1,0 +1,769 @@
+[
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "updateAdmin",
+    "RelativePath": "Administrador/ActualizarAdministrador",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "Ecommercer_Cafe.Entitys.Administrador",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "insertAdmin",
+    "RelativePath": "Administrador/AgregarAdministrador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "Ecommercer_Cafe.Entitys.Administrador",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "lista",
+    "RelativePath": "Administrador/api/ObtenerAdministradores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "deleteAdmin",
+    "RelativePath": "Administrador/EliminarAdministrador",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "Login",
+    "RelativePath": "Administrador/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "Ecommercer_Cafe.Entitys.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.AdministradorController",
+    "Method": "getAdminById",
+    "RelativePath": "Administrador/ObtenerAdministrador/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "updateCarrito",
+    "RelativePath": "Carrito/ActualizarCarrito",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrito",
+        "Type": "Ecommercer_Cafe.Entitys.Carrito",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "insertCarrito",
+    "RelativePath": "Carrito/AgregarCarrito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrito",
+        "Type": "Ecommercer_Cafe.Entitys.Carrito",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "buyCarrito",
+    "RelativePath": "Carrito/ComprarAllCarrito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "historialMetodoPago",
+        "Type": "Ecommercer_Cafe.Entitys.HistorialMetodoPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "DeleteCarrito",
+    "RelativePath": "Carrito/EliminarCarrito",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "GetCarrito",
+    "RelativePath": "Carrito/ObtenerCarrito",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "GetCarritoById",
+    "RelativePath": "Carrito/ObtenerCarritoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.CarritoController",
+    "Method": "GetCarritoByUser",
+    "RelativePath": "Carrito/ObtenerCarritoDeUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "UpdateFavorito",
+    "RelativePath": "Favorito/ActualizarFavorito",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fav",
+        "Type": "Ecommercer_Cafe.Entitys.Favorito",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "InsertFavorito",
+    "RelativePath": "Favorito/AgregarFavorito",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fav",
+        "Type": "Ecommercer_Cafe.Entitys.Favorito",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "DeleteFaorito",
+    "RelativePath": "Favorito/EliminarFavorito",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "BuyFavById",
+    "RelativePath": "Favorito/MoverFavoritoAlCarrito/{idFav}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFav",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "BuyAllFav",
+    "RelativePath": "Favorito/MoverTodosFavoritosAlCarrito/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "GetFavoritoById",
+    "RelativePath": "Favorito/ObtenerFavorito/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "GetFavoritos",
+    "RelativePath": "Favorito/ObtenerFavoritos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.FavoritoController",
+    "Method": "GetFavoritoByIdUser",
+    "RelativePath": "Favorito/ObtenerFavoritosDeUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.HistorialController",
+    "Method": "InsertHistorial",
+    "RelativePath": "Historial/AgregarHistorial",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "historial",
+        "Type": "Ecommercer_Cafe.Entitys.Historial",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.HistorialController",
+    "Method": "DeleteHistorial",
+    "RelativePath": "Historial/EliminarHistorial/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.HistorialController",
+    "Method": "GetHistorialByIdUser",
+    "RelativePath": "Historial/ObtenerHistoralDelUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.HistorialController",
+    "Method": "GetHistoriales",
+    "RelativePath": "Historial/ObtenerHistoriales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.HistorialController",
+    "Method": "GetHistorialById",
+    "RelativePath": "Historial/ObtenerHistorialPorId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.MetodoPagoController",
+    "Method": "UpdateMetodoPago",
+    "RelativePath": "MetodoPago/ActualizarMetodoPago",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metodoPago",
+        "Type": "Ecommercer_Cafe.Entitys.MetodoPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.MetodoPagoController",
+    "Method": "InsertMetodoPago",
+    "RelativePath": "MetodoPago/AgregarMetodoPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metodoPago",
+        "Type": "Ecommercer_Cafe.Entitys.MetodoPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.MetodoPagoController",
+    "Method": "DeleteMetodoPago",
+    "RelativePath": "MetodoPago/EliminarMetodoPago/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.MetodoPagoController",
+    "Method": "GetMetodoPagoById",
+    "RelativePath": "MetodoPago/ObtenerMetodoPago/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.MetodoPagoController",
+    "Method": "GetMetodosPago",
+    "RelativePath": "MetodoPago/ObtenerMetodosDePago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.PersonaController",
+    "Method": "AddPersona",
+    "RelativePath": "Persona/AgregarPersona",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "persona",
+        "Type": "Ecommercer_Cafe.Entitys.Persona",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.PersonaController",
+    "Method": "GetPersonas",
+    "RelativePath": "Persona/GetPersonas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.PersonaController",
+    "Method": "InsertPersona",
+    "RelativePath": "Persona/InsertPersona",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "persona",
+        "Type": "Ecommercer_Cafe.Entitys.Persona",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "UpdateStockProducto",
+    "RelativePath": "Producto/ActualizarCantidadProducto/{id}/{cant}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cant",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "UpdateProducto",
+    "RelativePath": "Producto/ActualizarProducto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producto",
+        "Type": "Ecommercer_Cafe.Entitys.Producto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "InsertProducto",
+    "RelativePath": "Producto/AgregarProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producto",
+        "Type": "Ecommercer_Cafe.Entitys.Producto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "DeleteProducto",
+    "RelativePath": "Producto/EliminarProducto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "GetProductos",
+    "RelativePath": "Producto/ObtenerProductos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.ProductoController",
+    "Method": "GetProductoById",
+    "RelativePath": "Producto/ObtenerProductos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.TipoProductoController",
+    "Method": "UpdateTipoProducto",
+    "RelativePath": "TipoProducto/ActualizarTipoProducto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoProducto",
+        "Type": "Ecommercer_Cafe.Entitys.TipoProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.TipoProductoController",
+    "Method": "InsertTipoProducto",
+    "RelativePath": "TipoProducto/AgregarTipoProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoProducto",
+        "Type": "Ecommercer_Cafe.Entitys.TipoProducto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.TipoProductoController",
+    "Method": "DeleteTipoProducto",
+    "RelativePath": "TipoProducto/EliminarTipoProducto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.TipoProductoController",
+    "Method": "GetTipoProducto",
+    "RelativePath": "TipoProducto/ObtenerTipoProducto/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.TipoProductoController",
+    "Method": "GetTiposProductos",
+    "RelativePath": "TipoProducto/ObtenerTiposProductos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "updateUsuario",
+    "RelativePath": "Usuario/ActualizarUsuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Ecommercer_Cafe.Entitys.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "insertUser",
+    "RelativePath": "Usuario/AgregarUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Ecommercer_Cafe.Entitys.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "deleteUsuario",
+    "RelativePath": "Usuario/EliminarUsuario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "Usuario/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "log",
+        "Type": "Ecommercer_Cafe.Entitys.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "getUserById",
+    "RelativePath": "Usuario/ObtenerUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce_Cafe.API.Controllers.UsuarioController",
+    "Method": "getUsuarios",
+    "RelativePath": "Usuario/ObtenerUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

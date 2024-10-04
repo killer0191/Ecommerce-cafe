@@ -17,11 +17,11 @@ public partial class Producto
 
     public int IdTipoProducto { get; set; }
 
-    public virtual ICollection<Carrito> Carritos { get; set; } = new List<Carrito>();
+    public virtual ICollection<Carrito>? Carritos { get; set; } = new List<Carrito>();
 
-    public virtual ICollection<Favorito> Favoritos { get; set; } = new List<Favorito>();
+    public virtual ICollection<Favorito>? Favoritos { get; set; } = new List<Favorito>();
 
-    public virtual ICollection<Historial> Historials { get; set; } = new List<Historial>();
+    public virtual ICollection<Historial>? Historials { get; set; } = new List<Historial>();
 
     public virtual TipoProducto IdTipoProductoNavigation { get; set; } = null!;
 }
