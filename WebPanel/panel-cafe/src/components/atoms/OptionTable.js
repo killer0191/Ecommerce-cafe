@@ -1,9 +1,10 @@
 import React from "react";
+import '../../styles/buttons.sass';
 
-const OptionTable = ({label, action}) =>{
+const OptionTable = ({label, action, className="button"}) =>{
     return(
         <li>
-            <a onClick={action}>{label}</a>
+            <button onClick={action} className={className}>{label}</button>
         </li>
     );
 };

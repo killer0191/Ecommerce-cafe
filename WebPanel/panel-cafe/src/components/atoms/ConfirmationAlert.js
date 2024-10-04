@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import '../../styles/buttons.sass';
 
 const ConfirmationModal = ({ title, text, confirmText, cancelText, onConfirm, onCancel }) => {
   const swalWithBootstrapButtons = withReactContent(Swal.mixin({
     customClass: {
-      confirmButton: 'btn btn-success',
-      cancelButton: 'btn btn-danger'
+      confirmButton: 'button-confirm',
+      cancelButton: 'button-cancel'
     },
     buttonsStyling: false
   }));

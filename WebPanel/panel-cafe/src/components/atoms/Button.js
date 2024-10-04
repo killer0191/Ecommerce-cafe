@@ -1,8 +1,16 @@
-  // src/components/atoms/Button.js
-  const Button = ({ text, onClick, disabled }) => (
-    <button onClick={onClick} disabled={disabled} className="button">
+// src/components/atoms/Button.js
+import '../../styles/buttons.sass';
+
+const Button = ({ text, onClick, disabled, className = "button", visual = true }) => {
+  if (!visual) {
+    return null; // No renderizar nada si visual es false
+  }
+
+  return (
+    <button onClick={onClick} disabled={disabled} className={className}>
       {text}
     </button>
   );
-  //asd
-  export default Button;
+};
+
+export default Button;

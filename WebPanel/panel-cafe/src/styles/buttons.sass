@@ -1,0 +1,75 @@
+// styles/_buttons.sass
+
+// Estilo común para todos los botones
+.button
+  display: inline-block
+  padding: 10px 20px
+  font-size: 16px
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  transition: background-color 0.3s ease, color 0.3s ease
+
+  &:hover
+    filter: brightness(90%)
+
+  &:disabled
+    background-color: #ccc
+    cursor: not-allowed
+
+// Botón para iniciar sesión
+.button-login
+  @extend .button
+  background-color: #4CAF50 // Verde para "Iniciar sesión"
+  color: white
+
+  &:hover
+    background-color: #45a049
+
+// Botón para cerrar sesión
+.button-logout
+  @extend .button
+  background-color: #f44336 // Rojo para "Cerrar sesión"
+  color: white
+
+  &:hover
+    background-color: #d32f2f
+
+// Botón para eliminar un registro
+.button-delete
+  @extend .button
+  background-color: #e53935 // Rojo fuerte para "Eliminar"
+  color: white
+
+  &:hover
+    background-color: #c62828
+
+// Botón para insertar un registro
+.button-insert
+  @extend .button
+  background-color: #2196F3 // Azul para "Insertar"
+  color: white
+
+  &:hover
+    background-color: #1976d2
+
+    // Botón para confirmar una acción
+.button-confirm
+  @extend .button
+  background-color: #28a745 // Verde para "Confirmar"
+  color: white
+  margin:20px
+
+  &:hover
+    background-color: #218838
+
+// Botón para cancelar una acción
+.button-cancel
+  @extend .button
+  background-color: #ffc107 // Amarillo para "Cancelar"
+  color: white
+  margin:20px
+
+
+  &:hover
+    background-color: #e0a800

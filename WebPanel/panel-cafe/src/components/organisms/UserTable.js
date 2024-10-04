@@ -4,7 +4,7 @@ import ColumName from "../atoms/ColumName";
 import Celda from '../atoms/Celda';
 import OptionsTable from "../molecules/OptionsTable";
 
-const AdminTable = ({ celdas, encabezados = [], onDeleteAdmin }) => { 
+const UserTable = ({ celdas, encabezados = [], onDeleteAdmin }) => { 
     return (
       <TableContainer component={Paper} sx={{ maxWidth: '100%', overflowX: 'auto' }}>
         <Table sx={{ minWidth: 650 }} aria-label="admin table">
@@ -24,7 +24,7 @@ const AdminTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
             {celdas.length > 0 && celdas.map((element, index) => (
               <TableRow key={index} hover>
                 <TableCell align="center">
-                  <Celda label={element.idAdministrador} />
+                  <Celda label={element.idUsuario} />
                 </TableCell>
                 <TableCell align="center">
                   <Celda label={element.nombre} />
@@ -36,7 +36,10 @@ const AdminTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
                   <Celda label={element.correo} />
                 </TableCell>
                 <TableCell align="center">
-                  <OptionsTable id={element.idAdministrador} onDelete={onDeleteAdmin} />
+                  <Celda label={element.numero} />
+                </TableCell>
+                <TableCell align="center">
+                  <OptionsTable id={element.idUsuario} onDelete={onDeleteAdmin} type="User" />
                 </TableCell>
               </TableRow>
             ))}
@@ -46,4 +49,4 @@ const AdminTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
     );
 };
 
-export default AdminTable;
+export default UserTable;

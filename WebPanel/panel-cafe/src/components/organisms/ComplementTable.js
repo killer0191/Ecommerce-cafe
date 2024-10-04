@@ -3,8 +3,9 @@ import SearchForm from "../molecules/SearchForm";
 import Button from "../atoms/Button";
 import InsertAdmin from "../molecules/Modales/InsertAdmin"; // Importamos el componente del modal
 import Swal from 'sweetalert2';
+import '../../styles/buttons.sass';
 
-const ComplementTable = ({ text, button, onAddAdmin }) => { // Agregamos onAddAdmin como prop
+const ComplementTable = ({ text, button, onAddAdmin, visBut=true }) => { // Agregamos onAddAdmin como prop
 
   // Función para mostrar el modal de inserción de administrador
   const openInsertAdminModal = () => {
@@ -31,7 +32,7 @@ const ComplementTable = ({ text, button, onAddAdmin }) => { // Agregamos onAddAd
   return (
     <div>
       <SearchForm text={text} />
-      <Button text={button} onClick={openInsertAdminModal} disabled={false} />
+      <Button text={button} onClick={openInsertAdminModal} disabled={false} className="button-insert" visual={visBut} />
     </div>
   );
 };

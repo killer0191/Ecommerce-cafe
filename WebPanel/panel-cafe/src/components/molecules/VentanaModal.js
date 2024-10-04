@@ -3,7 +3,7 @@ import { Modal, Box, Typography, Avatar } from "@mui/material";
 import Button from "../atoms/Button"; // Importa tu átomo 'button'
 import ConfirmationModal from "../atoms/ConfirmationAlert"; // Importa el componente de confirmación
 import { logoutUser } from "../../services/authService"; // Importa la función de cerrar sesión
-
+import '../../styles/buttons.sass';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -64,6 +64,7 @@ const VentanaModal = ({ open, onClose, userData }) => {
       onClose(); // Cierra el modal principal al abrir la confirmación
     }} 
     text="Cerrar sesión" 
+    className="button-logout"
   />
 </Box>
 
