@@ -3,6 +3,7 @@ import HomePage from './components/pages/HomePage';
 import AdminPage from './components/pages/AdminPage';
 import LoginPage from './components/pages/LoginPage';
 import UserPage from './components/pages/UserPage';
+import MetodoPage from './components/pages/MetodoPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -42,6 +43,14 @@ function App() {
           element={
             <PrivateRoute>
               <UserPage />
+            </PrivateRoute>
+          }
+        />
+        <Route 
+          path="/metodos"
+          element={
+            <PrivateRoute>
+              <MetodoPage />
             </PrivateRoute>
           }
         />
