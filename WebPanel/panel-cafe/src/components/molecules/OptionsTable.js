@@ -4,6 +4,7 @@ import ConfirmationModal from '../atoms/ConfirmationAlert';
 import { DeleteAdmin } from '../../services/administradorService';
 import { DeleteUser } from "../../services/usuarioService";
 import { DeleteMetodo } from "../../services/metodoService";
+import { DeleteTipos } from "../../services/tiposService";
 import '../../styles/buttons.sass';
 
 const OptionsTable = ({ id, onDelete, type="Admin" }) => {
@@ -19,6 +20,8 @@ const OptionsTable = ({ id, onDelete, type="Admin" }) => {
         response = await DeleteUser({ id });
       }else if(type==="Metod"){
         response = await DeleteMetodo({id});
+      }else if(type==="Tipos"){
+        response = await DeleteTipos({id});
       }
       if (response.ok) {
         console.log("registro eliminado con éxito.");
