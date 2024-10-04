@@ -5,6 +5,7 @@ import LoginPage from './components/pages/LoginPage';
 import UserPage from './components/pages/UserPage';
 import MetodoPage from './components/pages/MetodoPage';
 import TiposPage from './components/pages/TiposPage';
+import HistorialPage from './components/pages/HistorialPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -60,6 +61,14 @@ function App() {
           element={
             <PrivateRoute>
               <TiposPage />
+            </PrivateRoute>
+          }
+        />
+         <Route 
+          path="/historial"
+          element={
+            <PrivateRoute>
+              <HistorialPage />
             </PrivateRoute>
           }
         />
