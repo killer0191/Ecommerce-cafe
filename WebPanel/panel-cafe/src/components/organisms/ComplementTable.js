@@ -4,7 +4,7 @@ import Button from "../atoms/Button";
 import InsertAdmin from "../molecules/Modales/InsertAdmin"; // Importamos el componente del modal
 import Swal from 'sweetalert2';
 
-const ComplementTable = ({ text, button }) => {
+const ComplementTable = ({ text, button, onAddAdmin }) => { // Agregamos onAddAdmin como prop
 
   // Función para mostrar el modal de inserción de administrador
   const openInsertAdminModal = () => {
@@ -18,7 +18,10 @@ const ComplementTable = ({ text, button }) => {
         if (modalElement) {
           import('react-dom').then(({ createRoot }) => {
             const root = createRoot(modalElement);
-            root.render(<InsertAdmin onSuccess={() => Swal.close()} />);
+            root.render(<InsertAdmin onSuccess={(newAdmin) => {
+              onAddAdmin(newAdmin); // Llama a la función onAddAdmin
+              Swal.close(); // Cierra el modal después de agregar el admin
+            }} />);
           });
         }
       }

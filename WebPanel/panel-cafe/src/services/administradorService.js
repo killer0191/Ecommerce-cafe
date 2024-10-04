@@ -66,14 +66,18 @@ export const getData = async (endpoint) => {
     return response;
   };
 
-  export const InsertNewAdmin = async({data})=>{
-    const response = await fetch(`${API_BASE_URL}/Administrador/AgregarAdministrador`, { // Usa la base URL
+  export const InsertNewAdmin = async (adminData) => {
+    let auxJson = JSON.stringify(adminData);
+    console.log(auxJson);
+    console.log(adminData);
+    const response = await fetch(`${API_BASE_URL}/Administrador/AgregarAdministrador`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ data }),
+      body: auxJson, // Envía el objeto directamente
     });
-
+  
     return response;
   };
+  
