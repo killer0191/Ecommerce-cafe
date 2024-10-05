@@ -1,18 +1,39 @@
 import React from "react";
-import { Select } from "@mui/material";
 import OptionSelect from '../atoms/OptionSelect';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
-const SelectForm = ({ listOptios = [], value, onChange, name }) => {
+
+const SelectForm = ({ listOptios = [], name }) => {
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+      };
   return (
     <Select
-      value={value || ''}  // Asigna el valor o una cadena vacía si el valor es indefinido
+      value={age}  // Asigna el valor o una cadena vacía si el valor es indefinido
       name={name}
-      onChange={onChange}  // Pasa la función onChange correctamente
+      onChange={handleChange}  // Pasa la función onChange correctamente
     >
-      {listOptios.map(option => (
-        <OptionSelect key={option.key} value={option.key} label={option.text} />
-      ))}
+      {listOptios.map(option => {
+        return(
+            <MenuItem key={option.key} value={option.id}>{option.text}</MenuItem>
+          )
+      })}
     </Select>
+//      <Select
+//      labelId="demo-simple-select-label"
+//      id="demo-simple-select"
+//      value={age}
+//      label="Age"
+//      onChange={handleChange}
+//    >
+//      <MenuItem value={10}>Ten</MenuItem>
+//      <MenuItem value={20}>Twenty</MenuItem>
+//      <MenuItem value={30}>Thirty</MenuItem>
+//    </Select>
+    
   );
 };
 

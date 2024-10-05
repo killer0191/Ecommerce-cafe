@@ -13,7 +13,7 @@ const InsertProduct = ({ onSuccess }) => {
     descripcion: "",
     precio: 0,
     stock: 0,
-    idTipoProducto: '' // Inicializamos con una cadena vacía para permitir selección manual
+    idTipoProducto: 0 // Inicializamos con una cadena vacía para permitir selección manual
   });
 
   const [listTipos, setListTipos] = useState([]);
@@ -75,10 +75,12 @@ const InsertProduct = ({ onSuccess }) => {
   useEffect(() => {
     const fetchTipos = async () => {
       const response = await GetTipos();
+      console.log(response);
       const tipos = response.map(tipo => ({
-        key: tipo.idTipoProducto,
+        id: tipo.idTipoProducto,
         text: tipo.nombre
       }));
+      console.log(tipos);
       setListTipos(tipos);
     };
 
@@ -133,7 +135,7 @@ const InsertProduct = ({ onSuccess }) => {
           list={listTipos} 
           name="idTipoProducto" 
           value={adminData.idTipoProducto} // Asigna el valor desde el estado
-          onChange={handleSelectChange} // Asigna el cambio de valor
+          // onChange={handleSelectChange} // Asigna el cambio de valor
         />
         <Button text="Guardar" onClick={handleSubmit} />
       </form>
