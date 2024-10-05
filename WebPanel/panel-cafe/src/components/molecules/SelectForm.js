@@ -4,17 +4,14 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 
-const SelectForm = ({ listOptios = [], name }) => {
-    const [age, setAge] = React.useState('');
+const SelectForm = ({ listOptios = [], name , onChange, value}) => {
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
-      };
+    
   return (
     <Select
-      value={age}  // Asigna el valor o una cadena vacía si el valor es indefinido
+      value={value}  // Asigna el valor o una cadena vacía si el valor es indefinido
       name={name}
-      onChange={handleChange}  // Pasa la función onChange correctamente
+      onChange={onChange}  // Pasa la función onChange correctamente
     >
       {listOptios.map(option => {
         return(

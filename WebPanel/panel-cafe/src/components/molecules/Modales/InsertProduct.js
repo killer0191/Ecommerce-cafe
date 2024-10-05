@@ -135,7 +135,7 @@ const InsertProduct = ({ onSuccess }) => {
           list={listTipos} 
           name="idTipoProducto" 
           value={adminData.idTipoProducto} // Asigna el valor desde el estado
-          // onChange={handleSelectChange} // Asigna el cambio de valor
+          onChange={handleSelectChange} // Asigna el cambio de valor
         />
         <Button text="Guardar" onClick={handleSubmit} />
       </form>

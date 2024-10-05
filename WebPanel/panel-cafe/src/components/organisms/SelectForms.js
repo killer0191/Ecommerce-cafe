@@ -11,7 +11,7 @@ const SelectForms = ({ label, list, name, value, onChange }) => {
         listOptios={list} 
         name={name} 
         value={value} 
-        // onChange={onChange} 
+        onChange={onChange} 
       />
     </FormControl>
   );
