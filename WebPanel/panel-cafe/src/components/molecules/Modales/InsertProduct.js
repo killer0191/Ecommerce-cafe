@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
 import InputField from '../../atoms/InputField';
 import Button from '../../atoms/Button';
 import { InsertNewProduct } from "../../../services/prodcutoService";
+import SelectForms from "../../organisms/SelectForms";
+import { GetTipos } from "../../../services/tiposService";
 
 const InsertProduct = ({ onSuccess }) => {
   const [adminData, setAdminData] = useState({
@@ -11,27 +13,24 @@ const InsertProduct = ({ onSuccess }) => {
     descripcion: "",
     precio: 0,
     stock: 0,
-    idTipoProducto: 0
+    idTipoProducto: '' // Inicializamos con una cadena vacía para permitir selección manual
   });
+
+  const [listTipos, setListTipos] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    setAdminData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    if (name.includes("idPersona.")) {
-      const field = name.split(".")[1];
-      setAdminData((prevData) => ({
-        ...prevData,
-        idPersonaNavigation: {
-          ...prevData.idPersonaNavigation,
-          [field]: value,
-        },
-      }));
-    } else {
-      setAdminData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
+  const handleSelectChange = (e) => {
+    setAdminData((prevData) => ({
+      ...prevData,
+      idTipoProducto: e.target.value // Actualiza con el valor seleccionado
+    }));
   };
 
   const handleSubmit = async () => {
@@ -55,7 +54,6 @@ const InsertProduct = ({ onSuccess }) => {
             icon: "success",
           });
   
-          // Recargar la vista
           window.location.reload(); // Esto refresca la página
         } else {
           Swal.fire({
@@ -73,11 +71,19 @@ const InsertProduct = ({ onSuccess }) => {
       }
     }
   };
-  
-  
-  
-  
 
+  useEffect(() => {
+    const fetchTipos = async () => {
+      const response = await GetTipos();
+      const tipos = response.map(tipo => ({
+        key: tipo.idTipoProducto,
+        text: tipo.nombre
+      }));
+      setListTipos(tipos);
+    };
+
+    fetchTipos();
+  }, []);
 
   return (
     <div>
@@ -87,7 +93,6 @@ const InsertProduct = ({ onSuccess }) => {
           type="hidden"
           value={adminData.idProducto}
           onChange={handleInputChange}
-          placeholder=""
           name="idProducto"
           required={true}
         />
@@ -119,17 +124,16 @@ const InsertProduct = ({ onSuccess }) => {
           type="number"
           value={adminData.stock}
           onChange={handleInputChange}
-          placeholder="0"
+          placeholder="Inventario"
           name="stock"
           required
         />
-          <InputField
-          type="number"
-          value={adminData.idTipoProducto}
-          onChange={handleInputChange}
-          placeholder="0"
-          name="idTipoProducto"
-          required
+        <SelectForms 
+          label="Tipo producto" 
+          list={listTipos} 
+          name="idTipoProducto" 
+          value={adminData.idTipoProducto} // Asigna el valor desde el estado
+          onChange={handleSelectChange} // Asigna el cambio de valor
         />
         <Button text="Guardar" onClick={handleSubmit} />
       </form>
