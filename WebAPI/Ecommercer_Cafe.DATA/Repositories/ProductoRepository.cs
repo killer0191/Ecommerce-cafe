@@ -48,37 +48,38 @@ namespace Ecommerce_Cafe.DATA.Repositories
             }
         }
 
-		public async Task<bool> Insertar(Producto entity)
-		{
-			try
-			{
-				// Busca el TipoProducto existente en la base de datos
-				var tipoProducto = await _context.TipoProductos.FindAsync(entity.IdTipoProducto);
-				if (tipoProducto == null)
-				{
-					// Si no existe el TipoProducto, puedes devolver false o manejar el error como prefieras
-					Console.WriteLine("TipoProducto no encontrado.");
-					return false;
-				}
+        public async Task<bool> Insertar(Producto entity)
+        {
+            try
+            {
+                // Busca el TipoProducto existente en la base de datos
+                var tipoProducto = await _context.TipoProductos.FindAsync(entity.IdTipoProducto);
+                if (tipoProducto == null)
+                {
+                    // Si no existe el TipoProducto, puedes devolver false o manejar el error como prefieras
+                    Console.WriteLine("TipoProducto no encontrado.");
+                    return false;
+                }
 
-				// Asigna la navegación sin crear un nuevo registro
-				entity.IdTipoProductoNavigation = tipoProducto;
+                // Asigna la navegación sin crear un nuevo registro
+                entity.IdTipoProductoNavigation = tipoProducto;
 
-				// Inserta el producto
-				_context.Productos.Add(entity);
-				await _context.SaveChangesAsync();
+                // Inserta el producto
+                _context.Productos.Add(entity);
+                await _context.SaveChangesAsync();
 
-				return true;
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(new { Message = ex.Message, StackTrace = ex.StackTrace });
-				return false;
-			}
-		}
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(new { Message = ex.Message, StackTrace = ex.StackTrace });
+                return false;
+            }
+        }
 
 
-		public async Task<Producto> ObtenerById(int id)
+
+        public async Task<Producto> ObtenerById(int id)
         {
             Producto producto = _context.Productos.FirstOrDefault(a => a.IdProducto == id);
             return producto;

@@ -890,18 +890,12 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
         "runtime": {
-          "Ecommerce_Cafe.DATA.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Ecommerce_Cafe.DATA.dll": {}
         }
       },
       "Ecommerce_Cafe.Entitys/1.0.0": {
         "runtime": {
-          "Ecommerce_Cafe.Entitys.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Ecommerce_Cafe.Entitys.dll": {}
         }
       }
     }

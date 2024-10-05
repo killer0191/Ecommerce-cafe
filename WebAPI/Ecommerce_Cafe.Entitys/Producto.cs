@@ -23,5 +23,5 @@ public partial class Producto
 
     public virtual ICollection<Historial>? Historials { get; set; } = new List<Historial>();
 
-    public virtual TipoProducto IdTipoProductoNavigation { get; set; } = null!;
+    public virtual TipoProducto? IdTipoProductoNavigation { get; set; } = null!;
 }

@@ -5,6 +5,7 @@ import { DeleteAdmin } from '../../services/administradorService';
 import { DeleteUser } from "../../services/usuarioService";
 import { DeleteMetodo } from "../../services/metodoService";
 import { DeleteTipos } from "../../services/tiposService";
+import { DeleteProduct } from "../../services/prodcutoService";
 import '../../styles/buttons.sass';
 
 const OptionsTable = ({ id, onDelete, type="Admin" }) => {
@@ -22,6 +23,8 @@ const OptionsTable = ({ id, onDelete, type="Admin" }) => {
         response = await DeleteMetodo({id});
       }else if(type==="Tipos"){
         response = await DeleteTipos({id});
+      }else if(type==="Products"){
+        response = await DeleteProduct({id});
       }
       if (response.ok) {
         console.log("registro eliminado con éxito.");

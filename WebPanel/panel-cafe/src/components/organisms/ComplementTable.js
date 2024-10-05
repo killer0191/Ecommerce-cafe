@@ -4,6 +4,7 @@ import Button from "../atoms/Button";
 import InsertAdmin from "../molecules/Modales/InsertAdmin"; // Importamos el componente del modal InsertAdmin
 import InsertMetodo from "../molecules/Modales/InsertMetod"; // Importamos el componente del modal InsertMetodo
 import InsertTipos from "../molecules/Modales/InsertTipos";
+import InsertProduct from "../molecules/Modales/InsertProduct";
 import Swal from 'sweetalert2';
 import '../../styles/buttons.sass';
 
@@ -35,6 +36,12 @@ const ComplementTable = ({ text, button, onAddAdmin, onAddMetodo, visBut = true,
             }
             else if (modalType === "tipos") {
               root.render(<InsertTipos onSuccess={(newTipo) => {
+                onAddMetodo(newTipo); // Llama a la función onAddMetodo
+                Swal.close(); // Cierra el modal después de agregar el método
+              }} />);
+            }
+            else if (modalType === "Products") {
+              root.render(<InsertProduct onSuccess={(newTipo) => {
                 onAddMetodo(newTipo); // Llama a la función onAddMetodo
                 Swal.close(); // Cierra el modal después de agregar el método
               }} />);
