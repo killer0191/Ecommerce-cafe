@@ -31,6 +31,7 @@ const MetodoTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
                 </TableCell>
                 <TableCell align="center">
                   <OptionsTable id={element.idMetodoPago} onDelete={onDeleteAdmin} type="Metod" />
+                  <OptionsTable id={element.idMetodoPago} registro={element} label="Editar" type="EditMetod" />
                 </TableCell>
               </TableRow>
             ))}

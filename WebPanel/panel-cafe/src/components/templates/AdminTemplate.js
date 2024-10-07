@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import NavBar from '../organisms/NavBar';
 import Header from '../organisms/Header';
 import { Box } from '@mui/material';
+import getDataCookie from '../../services/cookieService';
 
 const AdminTemplate = ({ children }) => {
+  const datAdmin = getDataCookie();
   const [isDrawerOpen, setDrawerOpen] = useState(true); // Estado para controlar el menú
 
   const toggleDrawer = () => {
@@ -19,7 +21,7 @@ const AdminTemplate = ({ children }) => {
         {/* Header fijo en la parte superior con el botón de abrir/cerrar el menú */}
         <Header 
           src="url_de_la_imagen.jpg" 
-          adminName="Admin" 
+          adminName={datAdmin.nombre} 
           isDrawerOpen={isDrawerOpen} 
           toggleDrawer={toggleDrawer} 
         />

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\adrym\\.nuget\\packages\\": {}
+    "C:\\Users\\auxdesarrollo3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
+      "projectUniqueName": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
       "projectName": "Ecommerce_Cafe.Entitys",
-      "projectPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
-      "packagesPath": "C:\\Users\\adrym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adrym\\OneDrive\\Documents\\Jhessy\\Proyecto\\WebAPI\\Ecommerce_Cafe.Entitys\\obj\\",
+      "projectPath": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\Ecommerce_Cafe.Entitys.csproj",
+      "packagesPath": "C:\\Users\\auxdesarrollo3\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\auxdesarrollo3\\Documents\\Proyectos\\Cafeteria\\Ecommerce-cafe\\WebAPI\\Ecommerce_Cafe.Entitys\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adrym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\auxdesarrollo3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -29,7 +29,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://innovadores-286554593191.d.codeartifact.us-east-1.amazonaws.com/nuget/codeartifact-nuget/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
@@ -67,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
