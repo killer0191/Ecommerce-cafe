@@ -3,6 +3,7 @@ import NavBar from '../organisms/NavBar';
 import Header from '../organisms/Header';
 import { Box } from '@mui/material';
 import getDataCookie from '../../services/cookieService';
+import { json } from 'react-router-dom';
 
 const AdminTemplate = ({ children }) => {
   const datAdmin = getDataCookie();
@@ -23,7 +24,8 @@ const AdminTemplate = ({ children }) => {
           src="url_de_la_imagen.jpg" 
           adminName={datAdmin.nombre} 
           isDrawerOpen={isDrawerOpen} 
-          toggleDrawer={toggleDrawer} 
+          toggleDrawer={toggleDrawer}
+          userData={datAdmin} 
         />
 
         {/* Contenido dinámico de cada página */}

@@ -3,7 +3,8 @@ import InputField from '../atoms/InputField';
 
 const SearchForm = ({text}) => {
     return(
-        <InputField type="text" value={text} />
+        //<InputField type="text" value={text} />
+        <div></div>
     );
 };
 
