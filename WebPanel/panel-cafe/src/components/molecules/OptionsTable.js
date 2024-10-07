@@ -4,13 +4,15 @@ import OptionTable from "../atoms/OptionTable";
 import ConfirmationModal from '../atoms/ConfirmationAlert';
 import Swal from 'sweetalert2'; // Importar SweetAlert2
 import EditMetodo from "./Modales/EditMetod";
+import EditTipo from "./Modales/EditTipo";
+import EditProduct from "./Modales/EditProduct";
 import { DeleteAdmin } from '../../services/administradorService';
 import { DeleteUser } from "../../services/usuarioService";
 import { DeleteMetodo } from "../../services/metodoService";
 import { DeleteTipos } from "../../services/tiposService";
 import { DeleteProduct } from "../../services/prodcutoService";
 import '../../styles/buttons.sass';
-import EditTipo from "./Modales/EditTipo";
+
 
 const OptionsTable = ({ id, onDelete, type="Admin", registro, label="Eliminar" }) => {
   let auxClass = "button";
@@ -74,6 +76,11 @@ const handleEditModal = () => {
           <EditTipo data={registro} onSuccess={() => Swal.close()} />
         );
        }
+       else if(type==="EditProduct"){
+        root.render(
+          <EditProduct product={registro} onSuccess={() => Swal.close()} />
+        );
+       }
       }
     },
     willClose: () => {
@@ -93,7 +100,7 @@ const handleEditModal = () => {
         {/* Botón para editar o eliminar */}
         <OptionTable
           label={label}
-          action={() => type === "EditMetod" || "EditTipo" ? handleEditModal() : setShowConfirmation(true)} // Abre el modal de edición o el de confirmación
+          action={() => type === "EditMetod" || "EditTipo" || "EditProduct" ? handleEditModal() : setShowConfirmation(true)} // Abre el modal de edición o el de confirmación
           className={auxClass}
         />
       </ul>

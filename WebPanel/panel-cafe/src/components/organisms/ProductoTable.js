@@ -43,6 +43,7 @@ const ProductoTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
                 </TableCell>
                 <TableCell align="center">
                   <OptionsTable id={element.idProducto} onDelete={onDeleteAdmin} type="Products" />
+                  <OptionsTable id={element.idProducto} registro={element} label="Editar" type="EditProduct" />
                 </TableCell>
               </TableRow>
             ))}
