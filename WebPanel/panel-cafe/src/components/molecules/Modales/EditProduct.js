@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
 import InputField from '../../atoms/InputField';
 import Button from '../../atoms/Button';
 import { EditOldProduct } from "../../../services/prodcutoService";
+import { GetTipos } from "../../../services/tiposService";
+import SelectForms from "../../organisms/SelectForms";
 
 const EditProduct =({onSuccess,product}) =>{
     const [productData, setProductData] = useState({
@@ -14,6 +16,7 @@ const EditProduct =({onSuccess,product}) =>{
         idTipoProducto: product.idTipoProducto
       });
     
+      const [listTipos, setListTipos] = useState([]);
       const handleInputChange = (e) => {
         const { name, value } = e.target;
           setProductData((prevData) => ({
@@ -23,6 +26,13 @@ const EditProduct =({onSuccess,product}) =>{
         
       };
     
+      const handleSelectChange = (e) => {
+        setProductData((prevData) => ({
+          ...prevData,
+          idTipoProducto: e.target.value // Actualiza con el valor seleccionado
+        }));
+      };
+
       const handleSubmit = async () => {
         const result = await Swal.fire({
           title: "¿Editar producto?",
@@ -66,6 +76,21 @@ const EditProduct =({onSuccess,product}) =>{
         }
       };
       
+      useEffect(() => {
+        const fetchTipos = async () => {
+          const response = await GetTipos();
+          console.log(response);
+          const tipos = response.map(tipo => ({
+            id: tipo.idTipoProducto,
+            text: tipo.nombre
+          }));
+          console.log(tipos);
+          setListTipos(tipos);
+        };
+    
+        fetchTipos();
+      }, []);
+
       return (
         <div>
           <h2>Editar producto</h2>
@@ -110,14 +135,13 @@ const EditProduct =({onSuccess,product}) =>{
               name="stock"
               required
             />
-            <InputField
-              type="text"
-              value={productData.idTipoProducto}
-              onChange={handleInputChange}
-              placeholder="Tipo de producto"
-              name="idTipoProducto"
-              required
-            />
+            <SelectForms 
+          label="Tipo producto" 
+          list={listTipos} 
+          name="idTipoProducto" 
+          value={productData.idTipoProducto} // Asigna el valor desde el estado
+          onChange={handleSelectChange} // Asigna el cambio de valor
+        />
             <Button text="Guardar" className="button-confirm" onClick={handleSubmit} />
           </form>
         </div>
