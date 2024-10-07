@@ -47,4 +47,19 @@ export const getData = async (endpoint) => {
   
     return response;
   };
+
+  export const EditOldTipos = async (adminData) => {
+    let auxJson = JSON.stringify(adminData);
+    console.log(auxJson);
+    console.log(adminData);
+    const response = await fetch(`${API_BASE_URL}/TipoProducto/ActualizarTipoProducto`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: auxJson, // Envía el objeto directamente
+    });
+  
+    return response;
+  };
   

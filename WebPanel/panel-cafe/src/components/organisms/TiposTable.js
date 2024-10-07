@@ -31,6 +31,7 @@ const TiposTable = ({ celdas, encabezados = [], onDeleteAdmin }) => {
                 </TableCell>
                 <TableCell align="center">
                   <OptionsTable id={element.idTipoProducto} onDelete={onDeleteAdmin} type="Tipos" />
+                  <OptionsTable id={element.idTipoProducto} registro={element} label="Editar" type="EditTipo" />
                 </TableCell>
               </TableRow>
             ))}

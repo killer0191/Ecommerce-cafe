@@ -10,9 +10,11 @@ import { DeleteMetodo } from "../../services/metodoService";
 import { DeleteTipos } from "../../services/tiposService";
 import { DeleteProduct } from "../../services/prodcutoService";
 import '../../styles/buttons.sass';
+import EditTipo from "./Modales/EditTipo";
 
 const OptionsTable = ({ id, onDelete, type="Admin", registro, label="Eliminar" }) => {
   let auxClass = "button";
+  let auxType = false;
   if(label === "Eliminar"){
     auxClass = "button-delete";
   }else if(label === "Editar"){
@@ -51,7 +53,7 @@ const OptionsTable = ({ id, onDelete, type="Admin", registro, label="Eliminar" }
   // Función para abrir el modal de edición como ventana emergente
 const handleEditModal = () => {
   Swal.fire({
-    title: 'Editar Método de Pago',
+    title: `Editar`,
     html: `<div id="edit-metodo-container"></div>`, // Aquí se inyectará el contenido de React
     showConfirmButton: false, // No mostramos los botones de SweetAlert
     showCancelButton: true, // Mostramos el botón de cancelar
@@ -60,10 +62,18 @@ const handleEditModal = () => {
       const container = Swal.getHtmlContainer().querySelector('#edit-metodo-container');
       
       if (container) {
+        
         const root = ReactDOM.createRoot(container); // Crear un root en React 18
+       if(type==="EditMetod"){
+        auxType = true;
         root.render(
           <EditMetodo metodo={registro} onSuccess={() => Swal.close()} />
         );
+       }else if(type==="EditTipo"){
+        root.render(
+          <EditTipo data={registro} onSuccess={() => Swal.close()} />
+        );
+       }
       }
     },
     willClose: () => {
@@ -83,7 +93,7 @@ const handleEditModal = () => {
         {/* Botón para editar o eliminar */}
         <OptionTable
           label={label}
-          action={() => type === "EditMetod" ? handleEditModal() : setShowConfirmation(true)} // Abre el modal de edición o el de confirmación
+          action={() => type === "EditMetod" || "EditTipo" ? handleEditModal() : setShowConfirmation(true)} // Abre el modal de edición o el de confirmación
           className={auxClass}
         />
       </ul>

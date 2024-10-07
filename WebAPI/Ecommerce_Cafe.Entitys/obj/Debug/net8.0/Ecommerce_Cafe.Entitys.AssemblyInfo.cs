@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecommerce_Cafe.Entitys")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b21fc75096d0ea72531b5e83a99457c07324defa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d6f1c00a17bb9f68e52ec0b40dc004d06910442")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecommerce_Cafe.Entitys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecommerce_Cafe.Entitys")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

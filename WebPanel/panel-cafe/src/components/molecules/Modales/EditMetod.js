@@ -32,11 +32,11 @@ const EditMetodo = ({ onSuccess, metodo }) => {
 
   const handleSubmit = async () => {
     const result = await Swal.fire({
-      title: "¿Editar nuevo metodo de pago?",
+      title: "¿Editar metodo de pago?",
       text: "¿Estás seguro de que deseas editar este metodo?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonText: "Guardar",
+      confirmButtonText: "Editar",
       cancelButtonText: "Cancelar",
     });
   
@@ -78,7 +78,7 @@ const EditMetodo = ({ onSuccess, metodo }) => {
       <h2>Editar Metodo de pago</h2>
       <form>
         <InputField
-          type="number"
+          type="hidden"
           value={adminData.idMetodoPago}
           onChange={handleInputChange}
           placeholder="ID Administrador"
@@ -95,7 +95,7 @@ const EditMetodo = ({ onSuccess, metodo }) => {
         />
 
         
-        <Button text="Guardar" onClick={handleSubmit} />
+        <Button text="Guardar" className="button-confirm" onClick={handleSubmit} />
       </form>
     </div>
   );
