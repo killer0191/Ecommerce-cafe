@@ -1,9 +1,9 @@
 import React from "react";
 import MenuItem from "@mui/material/MenuItem";
 
-const OptionSelect = ({ id, label}) => {
+const OptionSelect = ({llave, id, label}) => {
     return (
-        <MenuItem value={id}>{id + "-"+ label}</MenuItem>
+        <MenuItem key={llave} value={id}>{id + "-"+ label}</MenuItem>
     );
 };
 
