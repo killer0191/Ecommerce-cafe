@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { useEffect } from "react";
-//
+
 const AlertLoad = ({ label }) => {
   useEffect(() => {
     let timerInterval;

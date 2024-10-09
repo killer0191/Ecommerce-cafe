@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { useEffect } from "react";
-///
+///Holaaa
 //rama master
 const AlertError = ({ label, onClose }) => { // Añadimos onClose como prop para manejar el cierre
   useEffect(() => {
