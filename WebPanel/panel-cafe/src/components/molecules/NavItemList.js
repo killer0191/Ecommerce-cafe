@@ -11,15 +11,16 @@ import StyleIcon from '@mui/icons-material/Style';
 
 const NavItemList = ({ isDrawerOpen }) => {
   const navigate = useNavigate(); // Para navegar entre las páginas
-
+  let colorIcon = "#F2D9C2";
+  let colorText = '#F2F7E7';
   const menuItems = [
-    { text: 'Home', icon: <HomeIcon />, path: '/home' },
-    { text: 'Administradores', icon: <AdminPanelSettingsIcon />, path: '/admin' },
-    { text: 'Usuarios', icon: <PersonIcon />, path: '/usuarios' },
-    { text: 'Productos', icon: <CoffeeIcon />, path: '/producto' },
-    { text: 'Tipos de producto', icon: <CoffeeMakerIcon />, path: '/tipos' },
-    { text: 'Historial de ventas', icon: <SellIcon />, path: '/historial' },
-    { text: 'Métodos de pago', icon: <StyleIcon />, path: '/metodos' },
+    { text: 'Home', icon: <HomeIcon htmlColor={colorIcon}/>, path: '/home' },
+    { text: 'Administradores', icon: <AdminPanelSettingsIcon htmlColor={colorIcon} />, path: '/admin' },
+    { text: 'Usuarios', icon: <PersonIcon htmlColor={colorIcon}/>, path: '/usuarios' },
+    { text: 'Productos', icon: <CoffeeIcon htmlColor={colorIcon}/>, path: '/producto' },
+    { text: 'Tipos de producto', icon: <CoffeeMakerIcon htmlColor={colorIcon}/>, path: '/tipos' },
+    { text: 'Historial de ventas', icon: <SellIcon htmlColor={colorIcon}/>, path: '/historial' },
+    { text: 'Métodos de pago', icon: <StyleIcon htmlColor={colorIcon}/>, path: '/metodos' },
   ];
 
   return (
@@ -29,7 +30,7 @@ const NavItemList = ({ isDrawerOpen }) => {
           <ListItem button onClick={() => navigate(item.path)}>
             {item.icon}
             <Collapse in={isDrawerOpen} timeout="auto" unmountOnExit>
-              <ListItemText primary={item.text} />
+              <ListItemText primary={item.text} sx={{ color: colorText }}/>
             </Collapse>
           </ListItem>
           <Divider />

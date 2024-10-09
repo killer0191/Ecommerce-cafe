@@ -2,6 +2,7 @@ import React from 'react';
 import AdminTemplate from '../templates/AdminTemplate';
 
 const HomePage = () => {
+  let colorBack = '#3B2808';
   return (
     <AdminTemplate>
       <div>

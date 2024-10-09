@@ -17,7 +17,7 @@ const NavBar = ({ isDrawerOpen }) => {
           width: isDrawerOpen ? drawerWidth : 60,
           marginTop: '55px',  // Posición debajo del Header fijo
           transition: 'width 0.3s ease',
-          backgroundColor: '#1976d2',
+          backgroundColor: '#231708',
           position: 'fixed', // Fijo en la pantalla
         },
       }}

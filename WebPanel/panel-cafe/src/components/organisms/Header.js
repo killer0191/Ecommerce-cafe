@@ -7,7 +7,7 @@ import VentanaModal from "../molecules/VentanaModal"; // Tu modal personalizado
 const Header = ({ src, adminName, isDrawerOpen, toggleDrawer, userData }) => {
   // Estado para controlar si el modal está abierto o cerrado
   const [openModal, setOpenModal] = useState(false);
-
+  let colorText = '#F2F7E7';
   // Funciones para abrir y cerrar el modal
   const handleOpenModal = () => setOpenModal(true);
   const handleCloseModal = () => setOpenModal(false);
@@ -16,14 +16,14 @@ const Header = ({ src, adminName, isDrawerOpen, toggleDrawer, userData }) => {
     <>
       <AppBar 
         position="fixed"  // Mantén el Header fijo
-        sx={{ backgroundColor: '#1976d2', zIndex: 1201 }}  // ZIndex más alto para estar sobre el Drawer
+        sx={{ backgroundColor: '#231708', zIndex: 1201 }}  // ZIndex más alto para estar sobre el Drawer
       >
-        <Toolbar>
+        <Toolbar sx={{ color: colorText }}>
           {/* Botón de minimizar/maximizar el menú */}
           <IconButton
             onClick={toggleDrawer}
             edge="start"
-            sx={{ color: '#fff', marginRight: '16px' }}
+            sx={{ color: '#F2D9C2', marginRight: '16px' }}
           >
             {isDrawerOpen ? <ChevronLeftIcon /> : <MenuIcon />} {/* Cambia el ícono */}
           </IconButton>
