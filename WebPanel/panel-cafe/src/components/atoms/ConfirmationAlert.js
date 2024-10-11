@@ -13,14 +13,16 @@ const ConfirmationModal = ({ title, text, confirmText, cancelText, onConfirm, on
   }));
 
   useEffect(() => {
-    swalWithBootstrapButtons.fire({
-      title: title || 'Are you sure?',
-      text: text || "You won't be able to revert this!",
+    const swalInstance = swalWithBootstrapButtons.fire({
+      title: title || '¿Estás seguro?',
+      text: text || "¡No podrás revertir esto!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: confirmText || 'Yes, delete it!',
-      cancelButtonText: cancelText || 'No, cancel!',
-      reverseButtons: true
+      confirmButtonText: confirmText || 'Sí, eliminar!',
+      cancelButtonText: cancelText || 'No, cancelar',
+      reverseButtons: true,
+      allowOutsideClick: false, // Evita que se cierre al hacer clic fuera del modal
+      allowEscapeKey: true // Permite cerrar con la tecla ESC
     }).then((result) => {
       if (result.isConfirmed) {
         swalWithBootstrapButtons.fire({
@@ -44,7 +46,12 @@ const ConfirmationModal = ({ title, text, confirmText, cancelText, onConfirm, on
         }
       }
     });
-  }, []); // Ejecuta el SweetAlert al montar el componente
+
+    return () => {
+      // Asegura que se cierra el modal al desmontar el componente
+      //swalInstance.close();
+    };
+  }, [title, text, confirmText, cancelText, onConfirm, onCancel]); // Dependencias necesarias
 
   return null; // No renderizamos nada, ya que SweetAlert maneja la UI
 };

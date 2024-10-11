@@ -13,13 +13,11 @@ import { DeleteTipos } from "../../services/tiposService";
 import { DeleteProduct } from "../../services/prodcutoService";
 import '../../styles/buttons.sass';
 
-
 const OptionsTable = ({ id, onDelete, type="Admin", registro, label="Eliminar" }) => {
   let auxClass = "button";
-  let auxType = false;
   if(label === "Eliminar"){
     auxClass = "button-delete";
-  }else if(label === "Editar"){
+  } else if(label === "Editar"){
     auxClass = "button-cancel";
   }
 
@@ -52,47 +50,51 @@ const OptionsTable = ({ id, onDelete, type="Admin", registro, label="Eliminar" }
   };
 
   // Función para abrir el modal de edición como ventana emergente
-  // Función para abrir el modal de edición como ventana emergente
-const handleEditModal = () => {
-  Swal.fire({
-    title: `Editar`,
-    html: `<div id="edit-metodo-container"></div>`, // Aquí se inyectará el contenido de React
-    showConfirmButton: false, // No mostramos los botones de SweetAlert
-    showCancelButton: true, // Mostramos el botón de cancelar
-    cancelButtonText: 'Cerrar',
-    willOpen: () => {
-      const container = Swal.getHtmlContainer().querySelector('#edit-metodo-container');
-      
-      if (container) {
-        
-        const root = ReactDOM.createRoot(container); // Crear un root en React 18
-       if(type==="EditMetod"){
-        auxType = true;
-        root.render(
-          <EditMetodo metodo={registro} onSuccess={() => Swal.close()} />
-        );
-       }else if(type==="EditTipo"){
-        root.render(
-          <EditTipo data={registro} onSuccess={() => Swal.close()} />
-        );
-       }
-       else if(type==="EditProduct"){
-        root.render(
-          <EditProduct product={registro} onSuccess={() => Swal.close()} />
-        );
-       }
+  const handleEditModal = () => {
+    Swal.fire({
+      title: `Editar`,
+      html: `<div id="edit-metodo-container"></div>`, // Aquí se inyectará el contenido de React
+      showConfirmButton: false, // No mostramos los botones de SweetAlert
+      showCancelButton: true, // Mostramos el botón de cancelar
+      cancelButtonText: 'Cerrar',
+      willOpen: () => {
+        const container = Swal.getHtmlContainer().querySelector('#edit-metodo-container');
+        if (container) {
+          const root = ReactDOM.createRoot(container); // Crear un root en React 18
+          if(type === "EditMetod"){
+            root.render(
+              <EditMetodo metodo={registro} onSuccess={() => Swal.close()} />
+            );
+          } else if(type === "EditTipo"){
+            root.render(
+              <EditTipo data={registro} onSuccess={() => Swal.close()} />
+            );
+          } else if(type === "EditProduct"){
+            root.render(
+              <EditProduct product={registro} onSuccess={() => Swal.close()} />
+            );
+          }
+        }
+      },
+      willClose: () => {
+        const container = Swal.getHtmlContainer().querySelector('#edit-metodo-container');
+        if (container) {
+          const root = ReactDOM.createRoot(container);
+          root.unmount(); // Desmontar el componente al cerrar el modal
+        }
       }
-    },
-    willClose: () => {
-      const container = Swal.getHtmlContainer().querySelector('#edit-metodo-container');
-      
-      if (container) {
-        const root = ReactDOM.createRoot(container);
-        root.unmount(); // Desmontar el componente al cerrar el modal
-      }
-    }
-  });
-};
+    });
+  };
+
+  // Manejar el cierre del modal de confirmación
+  const handleCloseConfirmationModal = () => {
+    setShowConfirmation(false);
+  };
+
+  // Mostrar el modal de confirmación
+  const handleShowConfirmationModal = () => {
+    setShowConfirmation(true);
+  };
 
   return (
     <td>
@@ -100,7 +102,13 @@ const handleEditModal = () => {
         {/* Botón para editar o eliminar */}
         <OptionTable
           label={label}
-          action={() => type === "EditMetod" || "EditTipo" || "EditProduct" ? handleEditModal() : setShowConfirmation(true)} // Abre el modal de edición o el de confirmación
+          action={() => {
+            if (label === "Eliminar") {
+              handleShowConfirmationModal(); // Mostrar confirmación si es eliminar
+            } else {
+              handleEditModal(); // Abrir modal de edición si es editar
+            }
+          }}
           className={auxClass}
         />
       </ul>
@@ -115,9 +123,9 @@ const handleEditModal = () => {
             cancelText="Cancelar"
             onConfirm={() => {
               handleDelete(); // Llama a la función de eliminación
-              setShowConfirmation(false); // Cierra el modal
+              handleCloseConfirmationModal(); // Cierra el modal
             }}
-            onCancel={() => setShowConfirmation(false)} // Cierra el modal si se cancela
+            onCancel={handleCloseConfirmationModal} // Cierra el modal si se cancela
           />
         )
       }
