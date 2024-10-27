@@ -21,7 +21,7 @@ const AdminTemplate = ({ children }) => {
       <Box sx={{ flexGrow: 1, paddingTop: '64px' }}> {/* Deja espacio para el Header fijo */}
         {/* Header fijo en la parte superior con el botón de abrir/cerrar el menú */}
         <Header 
-          src="url_de_la_imagen.jpg" 
+          src="" 
           adminName={datAdmin.nombre} 
           isDrawerOpen={isDrawerOpen} 
           toggleDrawer={toggleDrawer}
