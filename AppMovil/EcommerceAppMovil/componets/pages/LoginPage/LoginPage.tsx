@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { View, Text, TextInput, ImageBackground, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
-import { login } from '../../../services/authService';
+import { loginService } from '../../../services/authService';
+import { useAuth } from '../../context/AuthContext';
 
-export default function LoginPage() {
+export default function LoginPage({ navigation }: { navigation: any }) {
+  const { login } = useAuth();
   const [correo, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -12,12 +14,13 @@ export default function LoginPage() {
   const handleLogin = async () => {
     setLoading(true);
     try {
-      const result = await login({ correo, password });
+      const result = await loginService({ correo, password });
       console.log('Inicio de sesión exitoso:', result);
-      // Aquí puedes redirigir al usuario o guardar el token
+      login(); // Actualizar el estado global de autenticación
+      navigation.navigate('HomeCustomerPage');
+      
     } catch (error) {
       console.error('Error de inicio de sesión:', error);
-      // Muestra un mensaje de error al usuario
     } finally {
       setLoading(false);
     }

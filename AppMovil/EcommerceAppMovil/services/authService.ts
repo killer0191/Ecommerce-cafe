@@ -6,7 +6,7 @@ interface LoginData {
   password: string;
 }
 
-export const login = async (data: LoginData) => {
+export const loginService = async (data: LoginData) => {
   try {
     const response = await api.post('/Usuario/Login', data);
     return response.data;
