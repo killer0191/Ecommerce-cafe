@@ -16,7 +16,12 @@ export default function LoginPage({ navigation }: { navigation: any }) {
     try {
       const result = await loginService({ correo, password });
       console.log('Inicio de sesión exitoso:', result);
-      login(); // Actualizar el estado global de autenticación
+
+      const userData = {
+        name: result.nombre
+      };
+
+      login(userData); // Actualizar el estado global de autenticación
       navigation.navigate('HomeCustomerPage');
       
     } catch (error) {

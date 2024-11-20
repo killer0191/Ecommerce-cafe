@@ -4,8 +4,13 @@ const { width } = Dimensions.get('window');
 const cardWidth = (width - 48) / 2;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  header: { flexDirection: 'row', alignItems: 'center', padding: 16, paddingTop: 48 },
+  container: { flex: 1, width: Dimensions.get('window').width, backgroundColor: '#fff' },
+  header: { flexDirection: 'row', alignItems: 'center', padding: 16, paddingTop: 10 },
+  
+  headerMenu: { width: Dimensions.get('window').width-35, flexDirection: 'row', justifyContent: 'space-between', alignItems:'center', padding:0, margin:0},
+  userDataMenu: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 10 },
+  imageBackGround: {width: Dimensions.get('window').width, height: Dimensions.get('window').height},
+
   headerText: { fontSize: 16, color: '#333' },
   promoBanner: { margin: 16, borderRadius: 16, overflow: 'hidden', height: 150 },
   promoImage: { width: '100%', height: '100%' },
