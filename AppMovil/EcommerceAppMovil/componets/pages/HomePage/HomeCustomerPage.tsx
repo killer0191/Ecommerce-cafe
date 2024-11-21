@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Header from '../../molecules/CustomerMolecules/Header';
@@ -9,13 +9,18 @@ import RegisterButton from '../../molecules/CustomerMolecules/RegisterButton';
 import styles from '../../../styles/HomeCustomerPageStyles';
 
 export default function HomeCustomerPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('Cappuccino');
+
   return (
     <View style={styles.container}>
       <StatusBar style="dark" />
       <Header />
       <ScrollView showsVerticalScrollIndicator={false}>
         <PromoBanner />
-        <CategoryList />
+        <CategoryList
+          selectedCategory={selectedCategory}
+          // onSelectedCategory={setSelectedCategory}
+        />
         <CoffeeGrid />
       </ScrollView>
       <RegisterButton />

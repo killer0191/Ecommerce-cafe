@@ -16,9 +16,9 @@ type Props = {
 export default function RegisterPage({ navigation }: Props) {
   return (
     <ScrollView>
-      <RegisterTemplate 
+      <RegisterTemplate
         onBackPress={() => navigation.goBack()}
-        onLoginPress={() => navigation}
+        onLoginPress={() => navigation.navigate}
       />
     </ScrollView>
   );

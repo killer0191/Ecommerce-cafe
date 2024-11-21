@@ -18,20 +18,28 @@ export default function Header() {
   return (
     <View style={styles.header}>
       {!isAuthenticated ? (
-        <TouchableOpacity onPress={() => navigation.navigate('LoginPage')}>
-          <TextComponent style={styles.headerText}>Iniciar sesión</TextComponent>
-        </TouchableOpacity>
+        <View style={styles.headerMenu}>
+          <View style={styles.userDataMenu}>
+            <TextComponent style={styles.headerText}>{user?.name}</TextComponent>
+            <ProfileImage
+              source={{ uri: 'https://static.vecteezy.com/system/resources/previews/000/649/115/original/user-icon-symbol-sign-vector.jpg' }}
+            />
+          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('LoginPage')}>
+            <TextComponent style={styles.headerText}>Iniciar sesión</TextComponent>
+          </TouchableOpacity>
+        </View>
       ) : (
         <View style={styles.headerMenu}>
           <TouchableOpacity onPress={logout}>
             <TextComponent style={styles.headerText}>Cerrar sesión</TextComponent>
-            </TouchableOpacity>
-            <View style={styles.userDataMenu}>
-              <TextComponent style={styles.headerText}>{user?.name}</TextComponent>
-              <ProfileImage
-                source={{ uri: 'https://static.vecteezy.com/system/resources/previews/000/649/115/original/user-icon-symbol-sign-vector.jpg' }}
-              />
-            </View>
+          </TouchableOpacity>
+          <View style={styles.userDataMenu}>
+            <TextComponent style={styles.headerText}>{user?.name}</TextComponent>
+            <ProfileImage
+              source={{ uri: 'https://static.vecteezy.com/system/resources/previews/000/649/115/original/user-icon-symbol-sign-vector.jpg' }}
+            />
+          </View>
         </View>
       )}
     </View>

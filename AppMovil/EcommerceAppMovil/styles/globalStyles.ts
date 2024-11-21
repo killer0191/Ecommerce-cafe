@@ -2,11 +2,13 @@ import { StyleSheet } from 'react-native'
 
 const globalStyles = StyleSheet.create({
   container: {
+    display: 'flex',
+    gap:10,
     padding: 24,
     marginTop: '100%'
   },
   title: {
-    fontSize: 32,
+    fontSize: 45,
     color: 'white',
     marginBottom: 16,
     textAlign: 'center',
@@ -30,10 +32,10 @@ const globalStyles = StyleSheet.create({
     backgroundColor: '#C17754',
     paddingVertical: 16,
     paddingHorizontal: 32,
-    borderRadius: 30,
+    borderRadius: 15,
   },
   buttonText: {
-    color: 'white',
+    color: '#1E1E1E',
     fontSize: 16,
     textAlign: 'center',
     //fontFamily: 'Inter-SemiBold',

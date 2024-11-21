@@ -5,19 +5,49 @@ import InputField from '../../atoms/TextComponent/InputFild';
 import PasswordInput from '../../molecules/RegisterMolecules/PasswordInput';
 import CheckboxWithLabel from '../../atoms/ButtonComponent/CheckboxWithLabel';
 import SubmitButton from '../../atoms/ButtonComponent/SubmitButton';
+import { registerService } from '../../../services/authService';
+import { useAuth } from '../../context/AuthContext';
 
-export default function RegisterForm() {
+type RegisterFormProps = { navigation: any; };
+
+export default function RegisterForm({ navigation }: RegisterFormProps) {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({ username: '', email: '', password: '', phone: '', address: '' });
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleSubmit = () => {
-    console.log('Form submitted:', formData);
+  const handleSubmit = async () => {
+    try {
+      const requestData = {
+        numero: formData.phone,
+        idPersonaNavigation: {
+          nombre: formData.username,
+          apellido: "",
+          correo: formData.email,
+          contraseña: formData.password,
+        },
+      };
+      
+      const result = await registerService(requestData);
+      console.log('Registro exitoso:', result);
+
+      if (result === 'Usuario insertado') {
+        const userData = {
+          name: formData.username
+        };        
+        login(userData);
+        navigation.navigate('HomeCustomerPage');
+      }
+
+    } catch (error:any) {
+      console.error('Error al registrar:', error.message);
+    }
   };
+  
 
   return (
     <View style={{ padding: 16 }}>
       <Label text="Usuario" />
-      <InputField placeholder="Gabriel" value={formData.username} onChangeText={(text) => setFormData({ ...formData, username: text })} />
+      <InputField placeholder="Nombre"  value={formData.username} onChangeText={(text) => setFormData({ ...formData, username: text })} />
       
       <Label text="E-mail" />
       <InputField placeholder="email@gmail.com" value={formData.email} onChangeText={(text) => setFormData({ ...formData, email: text })} />

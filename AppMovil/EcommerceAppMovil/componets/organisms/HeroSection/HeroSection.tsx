@@ -21,7 +21,7 @@ export default function HeroSection() {
     >
       <View style={globalStyles.container}>
         <Text style={globalStyles.title}>
-          Un café tan bueno que le encantará a su paladar
+          Un café tan{'\n'}bueno que le{'\n'}encantará a su{'\n'}paladar
         </Text>
         <Text style={globalStyles.subtitle}>
           El mejor grano, el tueste más fino, el sabor más potente.

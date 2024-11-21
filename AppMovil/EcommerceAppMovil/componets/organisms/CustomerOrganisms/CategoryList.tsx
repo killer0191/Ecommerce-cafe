@@ -5,9 +5,12 @@ import styles from '../../../styles/HomeCustomerPageStyles';
 
 const CATEGORIES = ['Cappuccino', 'Machiato', 'Latte', 'Americano'];
 
-export default function CategoryList() {
+export default function CategoryList ({ selectedCategory }: { selectedCategory: string }, {onSelectedCategory}:{onSelectedCategory:any}) {
   return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.categoriesContainer}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={styles.categoriesContainer}>
       {CATEGORIES.map((category, index) => (
         <CategoryButton key={category} title={category} isActive={index === 0} />
       ))}
