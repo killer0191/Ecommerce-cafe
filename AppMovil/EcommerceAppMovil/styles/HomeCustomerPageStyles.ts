@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   promoTitle: { width: 'auto', backgroundColor: '#373737', color: 'white', fontSize: 23, fontWeight: 'bold', paddingHorizontal: 8, paddingVertical: 0.3, borderRadius: 4, textAlign: 'center', alignSelf: 'flex-start' },
   
   categoriesContainer: { padding: 16, gap: 12 },
-  categoryButton: { paddingHorizontal: 20, paddingVertical: 10, borderRadius: 20, backgroundColor: '#F5F5F5', marginRight: 8 },
+  categoryButton: { paddingHorizontal: 20, paddingVertical: 10, borderRadius: 20, backgroundColor: '#F5F5F5',color: 'white', marginRight: 8 },
   categoryButtonActive: { backgroundColor: '#C17754' },
   categoryText: { color: '#666', fontSize: 14 },
   categoryTextActive: { color: 'white' },

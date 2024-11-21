@@ -19,9 +19,9 @@ export default function HomeCustomerPage() {
         <PromoBanner />
         <CategoryList
           selectedCategory={selectedCategory}
-          // onSelectedCategory={setSelectedCategory}
+          onSelectedCategory={setSelectedCategory}
         />
-        <CoffeeGrid />
+        <CoffeeGrid selectedCategory={selectedCategory} />
       </ScrollView>
       <RegisterButton />
     </View>
