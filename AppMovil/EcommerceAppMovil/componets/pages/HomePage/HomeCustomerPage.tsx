@@ -7,13 +7,14 @@ import CategoryList from '../../organisms/CustomerOrganisms/CategoryList';
 import CoffeeGrid from '../../organisms/CustomerOrganisms/CoffeeGrid';
 import RegisterButton from '../../molecules/CustomerMolecules/RegisterButton';
 import styles from '../../../styles/HomeCustomerPageStyles';
-import { GetTiposProductos } from '../../../services/tipoProductoService';
+
+import { GetProductsByTipoProducto } from '../../../services/clienteService';
 
 export default function HomeCustomerPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Cappuccino');
   
 async function asd123(){
-  let aux = await GetTiposProductos();
+  let aux = await GetProductsByTipoProducto(3);
   console.log(aux);
 }
 asd123();
