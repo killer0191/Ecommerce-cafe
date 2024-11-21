@@ -9,6 +9,9 @@ import RegisterButton from '../../molecules/CustomerMolecules/RegisterButton';
 import styles from '../../../styles/HomeCustomerPageStyles';
 
 import { GetTiposProductos } from '../../../services/clienteService';
+import { useAuth } from '../../context/AuthContext';
+import TextComponent from '../../atoms/TextComponent/TextComponent';
+import Menu from '../../molecules/CustomerMolecules/Menu';
 
 type TipoProducto = {
   id: number;
@@ -16,6 +19,7 @@ type TipoProducto = {
 };
 
 export default function HomeCustomerPage() {
+  const { isAuthenticated, user, logout } = useAuth();
   const [tipos, setTipos] = useState<TipoProducto[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<number>(0);
 
@@ -50,7 +54,12 @@ export default function HomeCustomerPage() {
         />
         <CoffeeGrid id={selectedCategory} /> {/* Cambiado `selectedCategory` a `id` */}
       </ScrollView>
-      <RegisterButton />
+
+      {!isAuthenticated ? (
+        <RegisterButton />
+      ) : (
+        <Menu/>
+      )}
     </View>
   );
 }

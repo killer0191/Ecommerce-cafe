@@ -4,16 +4,19 @@ import { View, TouchableOpacity, Image, Text } from 'react-native';
 import styles from '../../../styles/HomeCustomerPageStyles';
 import StarIcon from '../../atoms/CustomerAtoms/StarIcon';
 import { GetProductsByTipoProducto } from '../../../services/clienteService';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../../../navigation/types';
 
 type CoffeeGridProps = {
   id: number; // `id` puede ser `null` mientras no haya categoría seleccionada.
 };
 
 export default function CoffeeGrid({ id }: CoffeeGridProps) {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [products, setProducts] = useState<any[]>([]); // Arreglo para almacenar los productos.
   const [loading, setLoading] = useState<boolean>(false);
   const [imageSource, setImageSource] = useState<any>(null); // Cambiar a tipo `any` para manejar imágenes locales y URLs
-  
+
   useEffect(() => {
     // Si `id` es null, no intentamos cargar productos.
     if (id === null) return;
@@ -27,8 +30,14 @@ export default function CoffeeGrid({ id }: CoffeeGridProps) {
         // Aquí se asigna la imagen según el id de la categoría
         switch (id) {
           case 1:
+            setImageSource(require("../../../assets/Capuchino_con_leche_de_avena.jpg"));
+            break;
           case 3:
+            setImageSource(require("../../../assets/Capuchino_con_chocolate.jpg"));
+            break;
           case 4:
+            setImageSource(require("../../../assets/Capuchino_con_leche_de_avena.jpg"));
+            break;
           case 6:
             setImageSource(require("../../../assets/Capuchino_helado.png"));
             break;
@@ -66,16 +75,20 @@ export default function CoffeeGrid({ id }: CoffeeGridProps) {
   return (
     <View style={styles.coffeeGrid}>
       {products.map((item) => (
-  <TouchableOpacity key={item.id} style={styles.coffeeCard}>
-    <Image source={imageSource} style={styles.coffeeImage} />
-    <View style={styles.ratingContainer}>
-      <StarIcon />
-      <Text style={styles.ratingText}>{item.rating}</Text>
-    </View>
-    <Text style={styles.coffeeName}>{item.name}</Text>
-    <Text style={styles.coffeeDescription}>{item.description}</Text>
-  </TouchableOpacity>
-))}
+        <TouchableOpacity
+          key={item.id}
+          style={styles.coffeeCard}
+          onPress={() => navigation.navigate('DetailsPage', {item, imageSource})}
+        >
+          <Image source={imageSource} style={styles.coffeeImage} />
+          <View style={styles.ratingContainer}>
+            <StarIcon />
+            <Text style={styles.ratingText}>{item.rating}</Text>
+          </View>
+          <Text style={styles.coffeeName}>{item.name}</Text>
+          <Text style={styles.coffeeDescription}>{item.description}</Text>
+        </TouchableOpacity>
+      ))}
 
     </View>
   );

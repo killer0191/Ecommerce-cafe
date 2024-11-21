@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   
   promoBannerContainer: { position: 'relative', width: Dimensions.get('window').width, height: 200, overflow: 'hidden', justifyContent:'center'},
   halfTop: { position: 'absolute', top: 0, left: 0, right: 0, height: '50%', backgroundColor: '#373737' },
-  halfBottom: { position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%', backgroundColor: '#FFF' },
+  halfBottom: { position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%', backgroundColor: '#F9F9F9' },
   
   promoBanner: { margin: 16, borderRadius: 16, overflow: 'hidden', height: 150 },
   promoImage: { width: '100%', height: '100%' },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   categoryText: { color: '#666', fontSize: 14 },
   categoryTextActive: { color: 'white' },
   
-  coffeeGrid: { flexDirection: 'row', height:50, flexWrap: 'wrap', padding: 30, gap: 16, justifyContent: 'space-between', alignItems: 'center', paddingBottom: 30, flexGrow: 1 },
+  coffeeGrid: { backgroundColor:'#F9F9F9', flexDirection: 'row', height:80, flexWrap: 'wrap', padding: 30, gap: 16, justifyContent: 'space-between', alignItems: 'center', paddingBottom: 30, flexGrow: 1 },
   coffeeCard: { width: '45%', height: 'auto', backgroundColor: '#F5F5F5', borderRadius: 16, marginBottom: 16, justifyContent: 'center'},
   coffeeImage: { width: '100%', height: 150, resizeMode: 'cover', borderRadius: 16, },
   ratingContainer: { flexDirection: 'row', alignItems: 'center', gap: 4, position: 'absolute', top: 8, right: 8, backgroundColor: 'rgba(0,0,0,0.5)', padding: 4, borderRadius: 12 },
