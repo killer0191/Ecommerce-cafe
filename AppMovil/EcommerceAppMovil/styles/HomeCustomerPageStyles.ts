@@ -39,6 +39,25 @@ const styles = StyleSheet.create({
   coffeeDescription: { fontSize: 14, color: '#666', marginHorizontal: 12, marginBottom: 12 },
   registerButton: { margin: 16, backgroundColor: '#333', padding: 16, borderRadius: 30 },
   registerButtonText: { color: 'white', textAlign: 'center', fontSize: 16, fontWeight: 'bold' },
+
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    fontSize: 16,
+    color: '#888',
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyText: {
+    fontSize: 16,
+    color: '#888',
+  }
 });
 
 export default styles;

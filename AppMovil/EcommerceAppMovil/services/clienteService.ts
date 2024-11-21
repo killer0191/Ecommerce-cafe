@@ -1,5 +1,6 @@
 import { api } from "../config/apiConfig";
 
+/*Consumos del carrito*/
 export const GetCarritoDeUser = async(id: number)=>{
     try{
         let response = await api.get(`/Carrito/ObtenerCarritoDeUsuario/${id}`);
@@ -9,8 +10,6 @@ export const GetCarritoDeUser = async(id: number)=>{
         throw error;
     }
 }
-
-/*Consumos del carrito*/
 export const AgregarProductoCarrito = async(data:any)=>{
     try{
         let response = await api.post("/Carrito/AgregarCarrito", data);
@@ -75,6 +74,17 @@ export const AgregarFav = async(data:any)=>{
     }
 }
 
+/*Consumos de los tipos productos*/
+export const GetTiposProductos= async()=>{
+    try{
+        const tipos = await api.get("TipoProducto/ObtenerTiposProductos");
+        return tipos.data;
+    }catch(error: any){
+        console.error(error);
+        throw error;
+    }
+}
+
 /*Consumos de los productos*/
 const GetProducts = async()=>{
     try{
@@ -85,7 +95,6 @@ const GetProducts = async()=>{
         throw error;
     }
 }
-
 export const GetProductsByTipoProducto = async(id:number)=>{
     try{
         let productos = await GetProducts();

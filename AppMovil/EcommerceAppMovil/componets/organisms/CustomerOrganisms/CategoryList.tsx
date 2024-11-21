@@ -4,24 +4,23 @@ import CategoryButton from '../../atoms/CustomerAtoms/CategoryButton';
 import styles from '../../../styles/HomeCustomerPageStyles';
 
 type CategoryListProps = {
-  selectedCategory: string;
-  onSelectedCategory: (category: string) => void;
-}
+  selectedCategory: number | null;
+  onSelectedCategory: (id: number) => void;
+  listTipos: { id: number; nombre: string }[];
+};
 
-const CATEGORIES = ['Cappuccino', 'Machiato', 'Latte', 'Americano'];
-
-export default function CategoryList({ selectedCategory, onSelectedCategory }: CategoryListProps) {
+export default function CategoryList({ selectedCategory, onSelectedCategory, listTipos }: CategoryListProps) {
   return (
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.categoriesContainer}>
-      {CATEGORIES.map((category) => (
+      {listTipos.map((category) => (
         <CategoryButton
-          key={category}
-          title={category}
-          isActive={category === selectedCategory}
-          onPress={() => onSelectedCategory(category)}
+          key={category.id}
+          title={category.nombre}
+          isActive={category.id === selectedCategory}
+          onPress={() => onSelectedCategory(category.id)}
         />
       ))}
     </ScrollView>
