@@ -75,7 +75,7 @@ export default function CoffeeGrid({ id }: CoffeeGridProps) {
   return (
     <View style={styles.coffeeGrid}>
       {products.map((item) => (
-        <TouchableOpacity key={item.idProducto} style={styles.coffeeCard}>
+        <TouchableOpacity key={item.idProducto} style={styles.coffeeCard} onPress={() => navigation.navigate('DetailsPage', {item, imageSource})}>
           <Image source={imageSource} style={styles.coffeeImage} />
           <View style={styles.ratingContainer}>
             <StarIcon />
