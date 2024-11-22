@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet, Modal } from 'react-native';
 import { ArrowLeft, Minus, Plus, Trash2 } from 'lucide-react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { GetCarritoDeUser, GetProductById } from '../../../services/clienteService';
+import { EliminarCarrito, GetCarritoDeUser, GetProductById } from '../../../services/clienteService';
 
 // Simulated cart items
 const initialCartItems = [
@@ -18,10 +18,12 @@ type CarritoPageRouteProp = RouteProp<RootStackParamList, 'CarritoPage'>;
 export default function CarritoPage() {
   const route = useRoute<CarritoPageRouteProp>();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
+  
   const { idUsuario } = route.params;
   const [products, setProducts] = useState<any[]>([]);
- 
+  const [isBuying, setIsBuying] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -33,6 +35,7 @@ export default function CarritoPage() {
               // console.log(product);
               return {
                 ...product,
+                idCarrito:prod.idCarrito,
                 quantity: prod.cantidad,
                 image: '../../../assets/products/expreso.png'
               };
@@ -42,7 +45,6 @@ export default function CarritoPage() {
             }
           })
         );
-
         setProducts(userProducts);
 
       } catch (error) {
@@ -68,6 +70,25 @@ export default function CarritoPage() {
       .reduce((total, item) => total + item.precio * item.quantity, 0)
       .toFixed(2);
   };
+
+  const handleBuyCart = async () => {
+    console.log("Comprando carrito");
+    setIsBuying(true);
+    try {
+      for (const product of products) {
+        await EliminarCarrito(product.idCarrito);
+      }
+      // Limpiar el estado del carrito después de eliminar all los productos
+      setProducts([]);
+      setShowSuccessModal(true);
+    } catch (error) {
+      console.error("Error buying cart", error);
+    } finally {
+      setIsBuying(false);
+      // navigation.navigate('HomeCustomerPage');
+    }
+  };
+  
 
   return (
     <View style={styles.container}>
@@ -129,9 +150,36 @@ export default function CarritoPage() {
         </View>
       </View>
 
-      <TouchableOpacity style={styles.checkoutButton}>
-        <Text style={styles.checkoutButtonText}>Proceder al Pago</Text>
+      <TouchableOpacity
+        style={styles.checkoutButton}
+        onPress={handleBuyCart}>
+        <Text style={styles.checkoutButtonText}
+          disabled={isBuying}
+        >
+          {isBuying ? 'Comprando Espere...':'Proceder al Pago'}
+        </Text>
       </TouchableOpacity>
+
+      {/* Modal para el mensaje de éxito */}
+      <Modal
+        visible={showSuccessModal}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => setShowSuccessModal(false)}
+      >
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalText}>¡Compra realizada con éxito!</Text>
+            <TouchableOpacity
+              style={styles.closeButton}
+              onPress={() => setShowSuccessModal(false)}
+            >
+              <Text style={styles.closeButtonText}>Cerrar</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
     </View>
   );
 }
@@ -238,5 +286,30 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  modalContent: {
+    backgroundColor: '#FFF',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  modalText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  closeButton: {
+    backgroundColor: '#C17754',
+    padding: 10,
+    borderRadius: 5,
+  },
+  closeButtonText: {
+    color: '#FFF',
+    fontSize: 16,
   },
 })
