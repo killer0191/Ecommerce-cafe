@@ -30,16 +30,16 @@ export default function CoffeeGrid({ id }: CoffeeGridProps) {
         // Aquí se asigna la imagen según el id de la categoría
         switch (id) {
           case 1:
-            setImageSource(require("../../../assets/Capuchino_con_leche_de_avena.jpg"));
+            setImageSource(require("../../../assets/products/chocolate_caliente.jpg"));
             break;
           case 3:
-            setImageSource(require("../../../assets/Capuchino_con_chocolate.jpg"));
+            setImageSource(require("../../../assets/products/americano.png"));
             break;
           case 4:
-            setImageSource(require("../../../assets/Capuchino_con_leche_de_avena.jpg"));
+            setImageSource(require("../../../assets/products/capuchino_helado.png"));
             break;
           case 6:
-            setImageSource(require("../../../assets/Capuchino_helado.png"));
+            setImageSource(require("../../../assets/products/te.png"));
             break;
           default:
             setImageSource(require("../../../assets/DefaultImage.png")); // O cualquier imagen por defecto

@@ -6,5 +6,6 @@ export type RootStackParamList = {
     RegisterPage: undefined;
     LoginPage:undefined;
     DetailsPage: {item:any, imageSource:ImageSourcePropType};
+    FavoritePage:undefined;
   };
   

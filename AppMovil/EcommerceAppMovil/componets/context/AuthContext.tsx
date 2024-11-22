@@ -8,6 +8,7 @@ type AuthContextTypes = {
 }
 
 type User = {
+  id: number;
   name: string;
 };
 
@@ -21,6 +22,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = (userData:User) => {
     setIsAuthenticated(true);
     setUser(userData);
+    // console.log(userData); 
   }
   const logout = () => {
     setIsAuthenticated(false);

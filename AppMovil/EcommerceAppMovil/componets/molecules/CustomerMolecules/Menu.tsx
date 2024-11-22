@@ -16,13 +16,13 @@ export default function Menu() {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button} 
-        onPress={() => navigation.navigate('HomeCustomerPage')}>
-        <ShoppingCart />
+        onPress={() => navigation.navigate('FavoritePage')}>
+        <Heart />
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button} 
         onPress={() => navigation.navigate('HomeCustomerPage')}>
-        <Heart />
+        <ShoppingCart />
       </TouchableOpacity>
     </View>
   );

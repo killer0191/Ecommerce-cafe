@@ -31,10 +31,10 @@ export default function RegisterForm({ navigation }: RegisterFormProps) {
       console.log('Registro exitoso:', result);
 
       if (result === 'Usuario insertado') {
-        const userData = {
-          name: formData.username
-        };        
-        login(userData);
+        // const userData = {
+        //   name: formData.username
+        // };        
+        // login(userData);
         navigation.navigate('HomeCustomerPage');
       }
 

@@ -1,22 +1,58 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { NavigationProp, RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Heart, Star, ChevronLeft  } from 'lucide-react-native';
+import { Heart, Star, ChevronLeft } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
+import { AgregarFav } from '../../../services/clienteService';
+import { useAuth } from '../../context/AuthContext';
 
 type DetailsPageRouteProp = RouteProp<RootStackParamList, 'DetailsPage'>;
 
 export default function DetailsPage() {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const route = useRoute<DetailsPageRouteProp>();
   const { item, imageSource } = route.params;
+  const { user, isAuthenticated} = useAuth();
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const navigation = useNavigation();
+  const [isFavorited, setIsFavorited] = useState(false);
 
   const handleSizeSelect = (size: string) => {
     setSelectedSize(size);
   }
+
+  const handleFavoriteClick = async () => {
+    if (!isAuthenticated) {
+      navigation.navigate('LoginPage');
+      return;
+    }
+
+    // if (isFavorited) {
+    //     setIsFavorited(false); 
+    //   console.log("Eliminando del favorito");
+    //   return;
+    // }
+
+    // try {
+    //   const favorito = {
+    //     idUsuario: user?.id as number,
+    //     idProducto: item.idProducto,
+    //   };
+
+    //   console.log(favorito);
+    //   const response = await AgregarFav(favorito);
+
+    //   console.log(response);
+
+    //   // if (response.status === 200) {
+    //   // console.log("Agregando a favorito");
+    //   //   setIsFavorited(true); // Actualizar estado
+    //   // }
+    // } catch (error) {
+    //   console.error("Error adding to favorites", error);
+    // }
+  };
 
   return (
     <View style={styles.container}>
@@ -25,7 +61,14 @@ export default function DetailsPage() {
           <Text style={styles.textSize1}><ChevronLeft /></Text>
         </TouchableOpacity>
         <Text style={styles.textSize1}>Detail</Text>
-        <Heart />
+        <TouchableOpacity
+          onPress={handleFavoriteClick}>
+          {isFavorited ? (
+            <Heart size={30} color="#d37c39" fill="#d37c39" />
+          ) : (
+            <Heart size={30} color="gray" />
+          )}
+        </TouchableOpacity>
       </View>
       <View style={styles.body}>
         <View style={styles.imageContainer}>

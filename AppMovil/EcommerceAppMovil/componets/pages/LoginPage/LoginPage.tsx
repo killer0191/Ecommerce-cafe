@@ -19,6 +19,7 @@ export default function LoginPage({ navigation }: { navigation: any }) {
 
       if (result !== 'Usuario no encontrado') {
         const userData = {
+          id: result.idUsuario,
           name: result.nombre
         };
 

@@ -45,6 +45,11 @@ export const ComprarCarrito = async(data:any)=>{
     }
 }
 
+interface FavoriteData {
+    idUsuario: number,
+    idProducto: string,
+}
+  
 /*Consumos de los favortos*/
 export const GetFavsUser = async(id:number)=>{
     try{
@@ -64,7 +69,7 @@ export const EliminarFavs = async(id:number)=>{
         throw error;
     }
 }
-export const AgregarFav = async(data:any)=>{
+export const AgregarFav = async(data:FavoriteData)=>{
     try{
         let response = await api.post("/Favorito/AgregarFavorito",data);
         return response.data;
