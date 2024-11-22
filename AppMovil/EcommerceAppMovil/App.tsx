@@ -8,6 +8,7 @@ import LoginPage from './componets/pages/LoginPage/LoginPage';
 import { AuthProvider } from './componets/context/AuthContext';
 import DetailsPage from './componets/pages/DetailsPage/DetailsPage';
 import FavoritePage from './componets/pages/FavoritesPage/FavoritePage';
+import CarritoPage from './componets/pages/CarritoPage/CarritoPage';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,7 @@ export default function App() {
           <Stack.Screen name="HomeCustomerPage" component={HomeCustomerPage} />
           <Stack.Screen name="DetailsPage" component={DetailsPage} />
           <Stack.Screen name="FavoritePage" component={FavoritePage} />
+          <Stack.Screen name="CarritoPage" component={CarritoPage}/>
           <Stack.Screen name="RegisterPage" component={RegisterPage} />
           <Stack.Screen name="LoginPage" component={LoginPage} />
         </Stack.Navigator>
