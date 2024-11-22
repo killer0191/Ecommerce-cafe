@@ -1,5 +1,12 @@
 import { api } from "../config/apiConfig";
 
+interface ProductoACarritoData {
+    idCarrito: number,
+    cantidad: number,
+    idUsuario: number,
+    idProducto: string
+}
+
 /*Consumos del carrito*/
 export const GetCarritoDeUser = async(id: number)=>{
     try{
@@ -10,7 +17,7 @@ export const GetCarritoDeUser = async(id: number)=>{
         throw error;
     }
 }
-export const AgregarProductoCarrito = async(data:any)=>{
+export const AgregarProductoCarrito = async(data:ProductoACarritoData)=>{
     try{
         let response = await api.post("/Carrito/AgregarCarrito", data);
         return response.data;
@@ -46,13 +53,14 @@ export const ComprarCarrito = async(data:any)=>{
 }
 
 interface FavoriteData {
+    idFavorito: number,
     idUsuario: number,
     idProducto: string,
 }
   
 /*Consumos de los favortos*/
 export const GetFavsUser = async(id:number)=>{
-    try{
+    try {
         let response = await api.get(`/Favorito/ObtenerFavoritosDeUsuario?id=${id}`);
         return response.data;
     }catch(error:any){
@@ -60,7 +68,7 @@ export const GetFavsUser = async(id:number)=>{
         throw error;
     }
 }
-export const EliminarFavs = async(id:number)=>{
+export const EliminarFavs = async (id: number) => {
     try{
      let response = await api.delete(`/Favorito/EliminarFavorito?id=${id}`);   
      return response.data;

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { NavigationProp, RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Heart, Star, ChevronLeft } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
-import { AgregarFav } from '../../../services/clienteService';
+import { AgregarFav, AgregarProductoCarrito, EliminarFavs, GetFavsUser } from '../../../services/clienteService';
 import { useAuth } from '../../context/AuthContext';
 
 type DetailsPageRouteProp = RouteProp<RootStackParamList, 'DetailsPage'>;
@@ -14,13 +14,39 @@ export default function DetailsPage() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const route = useRoute<DetailsPageRouteProp>();
   const { item, imageSource } = route.params;
-  const { user, isAuthenticated} = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [isFavorited, setIsFavorited] = useState(false);
+  const [idFavorito, setIdFavorito] = useState<number | null>(null);
 
   const handleSizeSelect = (size: string) => {
     setSelectedSize(size);
-  }
+  };
+
+  useEffect(() => {
+    // Verificar solo si el usuario está autenticado
+    if (isAuthenticated && user && item) {
+      const checkFavoriteStatus = async () => {
+        try {
+          const response = await GetFavsUser(user.id);
+
+          const favoriteProducts = response;
+          const favorite = favoriteProducts.find((fav: any) => fav.idProducto === item.idProducto);
+
+          if (favorite) {
+            setIsFavorited(true);
+            setIdFavorito(favorite.idFavorito); // Almacenar el idFavorito
+          } else {
+            setIsFavorited(false);
+            setIdFavorito(null);
+          }
+        } catch (error) {
+          console.error("Error checking favorite status", error);
+        }
+      };
+      checkFavoriteStatus();
+    }
+  }, [item.idProducto, user, isAuthenticated, isFavorited]);
 
   const handleFavoriteClick = async () => {
     if (!isAuthenticated) {
@@ -28,31 +54,53 @@ export default function DetailsPage() {
       return;
     }
 
-    // if (isFavorited) {
-    //     setIsFavorited(false); 
-    //   console.log("Eliminando del favorito");
-    //   return;
-    // }
+    if (isFavorited && idFavorito) {
+      try {
+        const response = await EliminarFavs(idFavorito);
+        if (response === 'Favorito eliminado') {
+          setIsFavorited(false);
+          // console.log("Eliminando del favorito");
+        }
+      } catch (error) {
+        console.error("Error removing from favorites", error);
+      }
+      return;
+    }
 
-    // try {
-    //   const favorito = {
-    //     idUsuario: user?.id as number,
-    //     idProducto: item.idProducto,
-    //   };
+    try {
+      const favorito = {
+        idFavorito: 0,
+        idUsuario: user?.id as number,
+        idProducto: item.idProducto,
+      };
 
-    //   console.log(favorito);
-    //   const response = await AgregarFav(favorito);
+      const response = await AgregarFav(favorito);
 
-    //   console.log(response);
-
-    //   // if (response.status === 200) {
-    //   // console.log("Agregando a favorito");
-    //   //   setIsFavorited(true); // Actualizar estado
-    //   // }
-    // } catch (error) {
-    //   console.error("Error adding to favorites", error);
-    // }
+      if (response === 'Favorito insertado') {
+        // console.log("Agregando a favorito");
+        setIsFavorited(true); // Actualizar estado
+        setIdFavorito(response.idFavorito); // Asignar el idFavorito retornado
+      }
+    } catch (error) {
+      console.error("Error adding to favorites", error);
+    }
   };
+
+  const handleAddToCart = async () => {
+    try {
+      const productData = {
+        "idCarrito": 0,
+        "cantidad": 1,
+        "idUsuario": user?.id as number,
+        "idProducto": item.idProducto
+      }
+      
+      const response = await AgregarProductoCarrito(productData);
+      console.log(response);
+    } catch (error) {
+      console.error("Error checking favorite status", error);
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -61,8 +109,7 @@ export default function DetailsPage() {
           <Text style={styles.textSize1}><ChevronLeft /></Text>
         </TouchableOpacity>
         <Text style={styles.textSize1}>Detail</Text>
-        <TouchableOpacity
-          onPress={handleFavoriteClick}>
+        <TouchableOpacity onPress={handleFavoriteClick}>
           {isFavorited ? (
             <Heart size={30} color="#d37c39" fill="#d37c39" />
           ) : (
@@ -108,8 +155,11 @@ export default function DetailsPage() {
           <Text style={styles.precioLabel}>Precio</Text>
           <Text style={styles.precioText}>${item.precio}</Text>
         </View>
-        <TouchableOpacity style={styles.buyButton}>
-          <Text style={styles.textBuy}>Comprar Ahora</Text>
+        <TouchableOpacity
+          onPress={handleAddToCart}
+          style={styles.buyButton}
+        >
+          <Text style={styles.textBuy}>Agregar al carrito</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -233,5 +283,4 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
   },
-
 });
