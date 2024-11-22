@@ -97,6 +97,7 @@ export default function DetailsPage() {
       
       const response = await AgregarProductoCarrito(productData);
       console.log(response);
+    navigation.navigate('CarritoPage', { idUsuario: user?.id as number })
     } catch (error) {
       console.error("Error checking favorite status", error);
     }

@@ -3,12 +3,14 @@ import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity } from 'react
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { ChevronLeft, Heart } from 'lucide-react-native';
+import { GetFavsUser, GetProductById } from '../../../services/clienteService';
+import { useAuth } from '../../context/AuthContext';
 
 type Product = {
   id: string;
-  name: string;
-  description: string;
-  price: number;
+  nombre: string;
+  descripcion: string;
+  precio: number;
   rating: number;
 };
 
@@ -16,30 +18,33 @@ export default function FavoritePage() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const [favorites, setFavorites] = useState<Product[]>([]);
   const [imageSource, setImageSource] = useState<any>(null);
+  const { user } = useAuth();
 
   useEffect(() => {
-    function fetchFavorites() {
-      const favoriteProducts: Product[] = [
-        {
-          id: '1',
-          name: 'Café Mocha',
-          description: 'Delicioso café con chocolate',
-          // image: '../../../assets/products/expreso.jpg',
-          price: 4.5,
-          rating: 4.8,
-        },
-        {
-          id: '2',
-          name: 'Latte',
-          description: 'Espuma de leche con café',
-          price: 3.8,
-          rating: 4.6,
-        }
-      ];
-      setFavorites(favoriteProducts);
+    const fetchFavorites = async ()=> {
+      try {
+        const response = await GetFavsUser(user?.id as number);
+        const favoriteProducts = await Promise.all(
+          response.map(async (fav: any) => {
+            const product = await GetProductById(fav.idProducto);
+            return { ...product, idFavorito: fav.idFavorito}
+          })
+        )
+        // console.log(favoriteProducts);
+        const listFav: Product[] = favoriteProducts;
+        // console.log(listFav);
+        setFavorites(listFav);
+
+      } catch (error) {
+        console.error("Error checking favorite status", error);
+      }
     }
 
     fetchFavorites();
+  }, []);
+
+  useEffect(() => {
+    setImageSource(require('../../../assets/products/expreso.png'));
   }, []);
 
   const renderItem = ({ item }: { item: Product }) => (
@@ -47,13 +52,13 @@ export default function FavoritePage() {
       style={styles.itemContainer}
       onPress={() => navigation.navigate('DetailsPage', { item, imageSource })}
     >
-      {/* <Image source={require('../../../assets/products/expreso.jpg')} style={styles.itemImage} /> */}
+      <Image source={imageSource} style={styles.itemImage} />
 
       <View style={styles.itemDetails}>
-        <Text style={styles.itemName}>{item.name}</Text>
-        <Text style={styles.itemDescription}>{item.description}</Text>
+        <Text style={styles.itemName}>{item.nombre}</Text>
+        <Text style={styles.itemDescription}>{item.descripcion}</Text>
         <View style={styles.itemFooter}>
-          <Text style={styles.itemPrice}>${item.price}</Text>
+          <Text style={styles.itemPrice}>${item.precio}</Text>
           <View style={styles.itemRating}>
             <Heart color="#FFD700" fill="#FFD700" />
             <Text style={styles.ratingText}>{item.rating}</Text>

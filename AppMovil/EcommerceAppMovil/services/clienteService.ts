@@ -124,3 +124,12 @@ export const GetProductsByTipoProducto = async(id:number)=>{
         throw error;
     }
 }
+export const GetProductById = async (id: number) => {
+  try {
+    const response = await api.get(`/Producto/ObtenerProductos/${id}`);
+    return response.data;
+  } catch (error: any) {
+    console.error(error);
+    throw error;
+  }
+};

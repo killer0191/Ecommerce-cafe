@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { ArrowLeft, Minus, Plus, Trash2 } from 'lucide-react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { GetCarritoDeUser } from '../../../services/clienteService';
+import { GetCarritoDeUser, GetProductById } from '../../../services/clienteService';
 
 // Simulated cart items
 const initialCartItems = [
@@ -20,32 +20,52 @@ export default function CarritoPage() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   const { idUsuario } = route.params;
-  async function GetProductos() {
-    try{
-        let response = await GetCarritoDeUser(idUsuario);
-        console.log(response);
-    }catch(error:any){
-        console.error(error);
+  const [products, setProducts] = useState<any[]>([]);
+ 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await GetCarritoDeUser(idUsuario);
+        const userProducts = await Promise.all(
+          response.map(async (prod: any) => {
+            try {
+              const product = await GetProductById(prod.idProducto);
+              // console.log(product);
+              return {
+                ...product,
+                quantity: prod.cantidad,
+                image: '../../../assets/products/expreso.png'
+              };
+            } catch (error) {
+              console.error(`Error fetching product ${prod.idProducto}:`, error);
+              return null;
+            }
+          })
+        );
+
+        setProducts(userProducts);
+
+      } catch (error) {
+        console.error("Error fetching favorites", error);
+      }
     }
-  }
 
-  GetProductos();
-
-  const [cartItems, setCartItems] = useState(initialCartItems);
-
+    fetchProducts();
+  }, []);
+  
   const updateQuantity = (id: number, change: number) => {
-    setCartItems(items =>
+    setProducts(items =>
       items
         .map(item =>
-          item.id === id ? { ...item, quantity: Math.max(0, item.quantity + change) } : item
+          item.idProducto === id ? { ...item, quantity: Math.max(0, item.quantity + change) } : item
         )
         .filter(item => item.quantity > 0)
     );
   };
 
   const getTotalPrice = () => {
-    return cartItems
-      .reduce((total, item) => total + item.price * item.quantity, 0)
+    return products
+      .reduce((total, item) => total + item.precio * item.quantity, 0)
       .toFixed(2);
   };
 
@@ -62,30 +82,30 @@ export default function CarritoPage() {
       </View>
 
       <ScrollView style={styles.itemList}>
-        {cartItems.map(item => (
-          <View key={item.id} style={styles.cartItem}>
+        {products.map(item => (
+          <View key={item.idProducto} style={styles.cartItem}>
             <Image source={{ uri: item.image }} style={styles.itemImage} />
             <View style={styles.itemInfo}>
-              <Text style={styles.itemName}>{item.name}</Text>
-              <Text style={styles.itemPrice}>${item.price.toFixed(2)}</Text>
+              <Text style={styles.itemName}>{item.nombre}</Text>
+              <Text style={styles.itemPrice}>${item.precio.toFixed(2)}</Text>
             </View>
             <View style={styles.quantityControl}>
               <TouchableOpacity
-                onPress={() => updateQuantity(item.id, -1)}
+                onPress={() => updateQuantity(item.idProducto, -1)}
                 style={styles.quantityButton}
               >
                 <Minus size={20} color="#C17754" />
               </TouchableOpacity>
               <Text style={styles.quantityText}>{item.quantity}</Text>
               <TouchableOpacity
-                onPress={() => updateQuantity(item.id, 1)}
+                onPress={() => updateQuantity(item.idProducto, 1)}
                 style={styles.quantityButton}
               >
                 <Plus size={20} color="#C17754" />
               </TouchableOpacity>
             </View>
             <TouchableOpacity
-              onPress={() => updateQuantity(item.id, -item.quantity)}
+              onPress={() => updateQuantity(item.idProducto, -item.quantity)}
               style={styles.deleteButton}
             >
               <Trash2 size={20} color="#FF4444" />
