@@ -11,7 +11,7 @@ public partial class Favorito
 
     public int IdProducto { get; set; }
 
-    public virtual Producto IdProductoNavigation { get; set; } = null!;
+    public virtual Producto? IdProductoNavigation { get; set; } = null!;
 
-    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+    public virtual Usuario? IdUsuarioNavigation { get; set; } = null!;
 }

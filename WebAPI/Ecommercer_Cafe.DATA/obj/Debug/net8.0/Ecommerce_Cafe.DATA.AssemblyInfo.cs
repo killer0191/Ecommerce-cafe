@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecommerce_Cafe.DATA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4827760654d9f3632c7421f2f09edda943f0290")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81117c90b120b50d561a9a179ba4185a9ac98248")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecommerce_Cafe.DATA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecommerce_Cafe.DATA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
