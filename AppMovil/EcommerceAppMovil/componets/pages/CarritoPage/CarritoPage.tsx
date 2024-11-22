@@ -4,7 +4,8 @@ import { ArrowLeft, Minus, Plus, Trash2 } from 'lucide-react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/types';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { EliminarCarrito, GetCarritoDeUser, GetProductById } from '../../../services/clienteService';
+import { ActualizarCarrito, EliminarCarrito, GetCarritoDeUser, GetProductById } from '../../../services/clienteService';
+import { useAuth } from '../../context/AuthContext';
 
 // Simulated cart items
 const initialCartItems = [
@@ -16,6 +17,7 @@ const initialCartItems = [
 type CarritoPageRouteProp = RouteProp<RootStackParamList, 'CarritoPage'>;
 
 export default function CarritoPage() {
+  const { user, isAuthenticated } = useAuth();
   const route = useRoute<CarritoPageRouteProp>();
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   
@@ -55,15 +57,44 @@ export default function CarritoPage() {
     fetchProducts();
   }, []);
   
-  const updateQuantity = (id: number, change: number) => {
-    setProducts(items =>
-      items
-        .map(item =>
-          item.idProducto === id ? { ...item, quantity: Math.max(0, item.quantity + change) } : item
-        )
-        .filter(item => item.quantity > 0)
-    );
+  const updateQuantity = async (id: number, change: number) => {
+    let updatedProducts = products
+      .map((item) => {
+        if (item.idProducto === id) {
+          const newQuantity = Math.max(0, item.quantity + change);
+          if (newQuantity <= 0) {
+            handleDelectProduct(item.idCarrito); 
+            return null;
+          }
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      })
+      .filter((item) => item != null);
+  
+    // Buscar producto actualizado para usarlo en la llamada hacia la Api
+    const updatedProduct = updatedProducts.find((item) => item?.idProducto === id);
+  
+    if (updatedProduct) {
+      const productData = {
+        idCarrito: updatedProduct.idCarrito,
+        cantidad: updatedProduct.quantity,
+        idUsuario: user?.id as number,
+        idProducto: updatedProduct.idProducto,
+      };
+  
+      try {
+        const response = await ActualizarCarrito(productData);
+        console.log(response);
+      } catch (error) {
+        console.error("Error al actualizar el carrito:", error);
+      }
+    }
+  
+    setProducts(updatedProducts);
   };
+  
+  
 
   const getTotalPrice = () => {
     return products
@@ -88,6 +119,18 @@ export default function CarritoPage() {
       // navigation.navigate('HomeCustomerPage');
     }
   };
+
+  const handleDelectProduct = async (idCarrito:number) => {
+    // console.log("Deleting product");
+    // console.log(idCarrito);
+    try {
+      await EliminarCarrito(idCarrito);
+      // Eliminamos el carrido de la lista 
+      setProducts(products.filter(product => product.idCarrito !== idCarrito));
+    } catch (error) {
+      console.error("Error deleting product in cart", error);
+    }
+  }
   
 
   return (
@@ -126,7 +169,7 @@ export default function CarritoPage() {
               </TouchableOpacity>
             </View>
             <TouchableOpacity
-              onPress={() => updateQuantity(item.idProducto, -item.quantity)}
+              onPress={() => handleDelectProduct(item.idCarrito)}
               style={styles.deleteButton}
             >
               <Trash2 size={20} color="#FF4444" />

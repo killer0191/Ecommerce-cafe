@@ -35,9 +35,10 @@ export const EliminarCarrito = async(id:number)=>{
         throw error;
     }
 }
-export const ActualizarCarrito = async(data:any)=>{
+export const ActualizarCarrito = async(data:ProductoACarritoData)=>{
     try{
-        let response = await api.put("/Carrito/ActualizarCarrito");   
+        let response = await api.put("/Carrito/ActualizarCarrito", data);  
+        return response.data;
     }catch(error:any){
         console.error(error);
         throw error;
